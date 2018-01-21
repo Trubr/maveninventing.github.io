@@ -1,0 +1,29 @@
+@mixin font--primary-light {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@mixin font--primary-regular {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin font--primary-medium {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@mixin font--primary-semibold {
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font--secondary-medium {
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}

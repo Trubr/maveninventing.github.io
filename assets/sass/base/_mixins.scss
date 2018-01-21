@@ -1,0 +1,58 @@
+@mixin responsive($width: $ms-small, $min-max: 'min') {
+    @media (#{$min-max}-width: $width) {
+        @content;
+    }
+}
+
+@mixin responsive-orientation($width: $ms-small, $orientation: landscape, $min-max: 'min') {
+    @media only screen and (#{$min-max}-width: $width) and (orientation: $orientation) {
+        @content;
+    }
+}
+
+$screen-xs-min: 414px;
+$screen-sm-min: 768px;
+$screen-md-min: 960px;
+$screen-lg-min: 1040px;
+$screen-xl-min: 1440px;
+$screen-xxl-min: 1640px;
+@mixin breakpoint($class) {
+    @if $class==mobile-only {
+        @media (max-width: #{$screen-sm-min} - 1) {
+            @content;
+        }
+    }
+    @else if $class==xs {
+        @media (min-width: #{$screen-xs-min}) {
+            @content;
+        }
+    }
+    @else if $class==sm {
+        @media (min-width: #{$screen-sm-min}) {
+            @content;
+        }
+    }
+    @else if $class==md {
+        @media (min-width: #{$screen-md-min}) {
+            @content;
+        }
+    }
+    @else if $class==lg {
+        @media (min-width: #{$screen-lg-min}) {
+            @content;
+        }
+    }
+    @else if $class==xl {
+        @media (min-width: #{$screen-xl-min}) {
+            @content;
+        }
+    }
+    @else if $class==xxl {
+        @media (min-width: #{$screen-xxl-min}) {
+            @content;
+        }
+    }
+    @else {
+        @warn "Breakpoint mixin supports: mobile-only, sm, md, lg";
+    }
+}

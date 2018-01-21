@@ -1,0 +1,145 @@
+@import
+"_fonts",
+"_text-size";
+
+
+// Heading XXLarge
+@mixin heading-xxlarge {
+  @include size--base-6;
+  @include font--primary-light;
+  line-height: 1.2;
+}
+
+// Heading XLarge
+@mixin heading-xlarge {
+  @include size--base-5;
+  @include font--primary-light;
+  line-height: 1.2;
+}
+
+// Heading Large
+@mixin heading-large {
+  @include size--base-4;
+  @include font--primary-light;
+  line-height: 1.3;
+}
+
+// Heading Medium
+@mixin heading-medium {
+  @include size--base-3;
+  @include font--primary-regular;
+  line-height: 1.3;
+}
+
+// Heading Small
+@mixin heading-small {
+  @include size--base-2;
+  @include font--primary-medium;
+  line-height: 1.3;
+}
+
+// Heading XSmall
+@mixin heading-xsmall {
+  @include size--base-1;
+  @include font--primary-semibold;
+  line-height: 1.3;
+}
+
+// Heading XXSmall -- Serif
+@mixin heading-xxsmall--serif {
+  @include size--base-0;
+  @include font--primary-semibold;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+// Heading XXSmall -- Sans
+@mixin heading-xxsmall--sans {
+  @include size--base-0;
+  @include font--secondary-medium;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+// Body Large
+@mixin body-large {
+  @include size--base-2;
+  @include font--primary-regular;
+  line-height: 1.5;
+}
+
+// Body
+@mixin body {
+  @include size--base-1;
+  @include font--primary-regular;
+  line-height: 1.5;
+}
+
+// Fine Print
+@mixin fine-print {
+  @include size--base-0;
+  @include font--primary-regular;
+  line-height: 1.5;
+}
+
+// Header button
+@mixin header-button-type {
+  @include size--base-0;
+  @include font--primary-semibold;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+// Header Index Titles
+@mixin header-index-title-type {
+  @include size--base-2;
+  @include font--primary-medium;
+  line-height: 1.3;
+}
+
+// Header Index main links
+@mixin header-index-main-link-type {
+  @include size--base-6;
+  @include font--primary-light;
+  line-height: 1.2;
+}
+
+// Header Index text
+@mixin header-index-text-type {
+  @include size--base-1;
+  @include font--primary-light;
+  line-height: 1.5;
+}
+
+// inner-page-nav-link
+@mixin inner-page-nav-link {
+  @include size--base-2;
+  @include font--primary-medium;
+  line-height: 1.3;
+}
+
+// Footer link
+@mixin footer-link-type {
+  @include size--base-0;
+  @include font--primary-semibold;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+// Buttons
+@mixin type-button-primary {
+  @include size--base-4;
+  @include font--primary-light;
+  line-height: 1.2;
+}
+
+// Lists
+@mixin type-list {
+  @include size--base-1;
+  @include font--primary-regular;
+  line-height: 1.2;
+}
