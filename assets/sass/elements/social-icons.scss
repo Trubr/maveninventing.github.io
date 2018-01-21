@@ -1,0 +1,26 @@
+.social-icons {
+
+	span{
+		margin-right: $spacer-md;
+		display: block;
+		color: $white;
+	}
+
+	a{
+		display: inline-block;
+	}
+	
+	#intro & {
+
+		svg {
+			height: 20px;
+			width: 20px;
+			fill: $white;
+		}
+
+		a{
+			margin-left: $spacer-2xs;
+		}
+	}
+
+}

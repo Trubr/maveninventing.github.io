@@ -1,0 +1,7 @@
+.enfase{
+	display: block;
+	color: $c7;
+	text-align: center;
+	@include body-large;
+	@include m-t-spacer-($spacer-lg);
+}

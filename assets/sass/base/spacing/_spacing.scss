@@ -8,14 +8,14 @@
 
 $cap: .9ex;     // Cap-height of the $b0 font size
 
-$spacer-none: 0; // 0
-$spacer-2xs: round($cap * .5); // 5px
-$spacer-xs: $cap; // 9px
-$spacer-sm: round($cap * 1.5);  // 14px
-$spacer-md: round($cap * 2.5);  // 23px
-$spacer-lg: round($cap * 4); // 36px
-$spacer-xl: round($cap * 6.5); // 59px
-$spacer-2xl: round($cap * 10.5); // 95px
+$spacer-none: 0;
+$spacer-2xs: $cap * .8;
+$spacer-xs: $cap; 
+$spacer-sm: round($cap * 1.5);
+$spacer-md: round($cap * 2.5);
+$spacer-lg: round($cap * 4);
+$spacer-xl: round($cap * 6.5);
+$spacer-2xl: round($cap * 10.5);
 
 $sizes: (
   none: $spacer-none,
@@ -33,30 +33,35 @@ $mobile-scale: .7;
 
 // margin
 @each $size, $value in $sizes {
+
   .m-t-spacer-#{$size} {
     margin-top: $value * $mobile-scale;
     @include breakpoint(sm) {
       margin-top: $value;
     }
   }
+
   .m-b-spacer-#{$size} {
     margin-bottom: $value * $mobile-scale;
     @include breakpoint(sm) {
       margin-bottom: $value;
     }
   }
+
   .m-l-spacer-#{$size} {
     margin-left: $value * $mobile-scale;
     @include breakpoint(sm) {
       margin-left: $value;
     }
   }
+
   .m-r-spacer-#{$size} {
     margin-right: $value * $mobile-scale;
     @include breakpoint(sm) {
       margin-right: $value;
     }
   }
+
   .m-x-spacer-#{$size} {
     margin-right: $value * $mobile-scale;
     margin-left: $value * $mobile-scale;
@@ -65,6 +70,7 @@ $mobile-scale: .7;
       margin-left: $value;
     }
   }
+
   .m-y-spacer-#{$size} {
     margin-top: $value * $mobile-scale;
     margin-bottom: $value * $mobile-scale;
@@ -101,6 +107,7 @@ $mobile-scale: .7;
       padding-right: $value * $mobile-scale;
     }
   }
+  
   .p-x-spacer-#{$size} {
     padding-right: $value * $mobile-scale;
     padding-left: $value * $mobile-scale;
@@ -109,6 +116,7 @@ $mobile-scale: .7;
       padding-left: $value * $mobile-scale;
     }
   }
+
   .p-y-spacer-#{$size} {
     padding-top: $value * $mobile-scale;
     padding-bottom: $value * $mobile-scale;

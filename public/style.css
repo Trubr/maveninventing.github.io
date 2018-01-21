@@ -33,39 +33,39 @@
       margin-top: 0;
       margin-bottom: 0; } }
   .m-t-spacer-2xs {
-  margin-top: 0ex; }
+  margin-top: 0.504ex; }
   @media (min-width: 768px) {
     .m-t-spacer-2xs {
-      margin-top: 0ex; } }
+      margin-top: 0.72ex; } }
   .m-b-spacer-2xs {
-  margin-bottom: 0ex; }
+  margin-bottom: 0.504ex; }
   @media (min-width: 768px) {
     .m-b-spacer-2xs {
-      margin-bottom: 0ex; } }
+      margin-bottom: 0.72ex; } }
   .m-l-spacer-2xs {
-  margin-left: 0ex; }
+  margin-left: 0.504ex; }
   @media (min-width: 768px) {
     .m-l-spacer-2xs {
-      margin-left: 0ex; } }
+      margin-left: 0.72ex; } }
   .m-r-spacer-2xs {
-  margin-right: 0ex; }
+  margin-right: 0.504ex; }
   @media (min-width: 768px) {
     .m-r-spacer-2xs {
-      margin-right: 0ex; } }
+      margin-right: 0.72ex; } }
   .m-x-spacer-2xs {
-  margin-right: 0ex;
-  margin-left: 0ex; }
+  margin-right: 0.504ex;
+  margin-left: 0.504ex; }
   @media (min-width: 768px) {
     .m-x-spacer-2xs {
-      margin-right: 0ex;
-      margin-left: 0ex; } }
+      margin-right: 0.72ex;
+      margin-left: 0.72ex; } }
   .m-y-spacer-2xs {
-  margin-top: 0ex;
-  margin-bottom: 0ex; }
+  margin-top: 0.504ex;
+  margin-bottom: 0.504ex; }
   @media (min-width: 768px) {
     .m-y-spacer-2xs {
-      margin-top: 0ex;
-      margin-bottom: 0ex; } }
+      margin-top: 0.72ex;
+      margin-bottom: 0.72ex; } }
   .m-t-spacer-xs {
   margin-top: 0.63ex; }
   @media (min-width: 768px) {
@@ -305,39 +305,39 @@
       padding-top: 0;
       padding-bottom: 0; } }
   .p-t-spacer-2xs {
-  padding-top: 0ex; }
+  padding-top: 0.504ex; }
   @media (min-width: 768px) {
     .p-t-spacer-2xs {
-      padding-top: 0ex; } }
+      padding-top: 0.504ex; } }
   .p-b-spacer-2xs {
-  padding-bottom: 0ex; }
+  padding-bottom: 0.504ex; }
   @media (min-width: 768px) {
     .p-b-spacer-2xs {
-      padding-bottom: 0ex; } }
+      padding-bottom: 0.504ex; } }
   .p-l-spacer-2xs {
-  padding-left: 0ex; }
+  padding-left: 0.504ex; }
   @media (min-width: 768px) {
     .p-l-spacer-2xs {
-      padding-left: 0ex; } }
+      padding-left: 0.504ex; } }
   .p-r-spacer-2xs {
-  padding-right: 0ex; }
+  padding-right: 0.504ex; }
   @media (min-width: 768px) {
     .p-r-spacer-2xs {
-      padding-right: 0ex; } }
+      padding-right: 0.504ex; } }
   .p-x-spacer-2xs {
-  padding-right: 0ex;
-  padding-left: 0ex; }
+  padding-right: 0.504ex;
+  padding-left: 0.504ex; }
   @media (min-width: 768px) {
     .p-x-spacer-2xs {
-      padding-right: 0ex;
-      padding-left: 0ex; } }
+      padding-right: 0.504ex;
+      padding-left: 0.504ex; } }
   .p-y-spacer-2xs {
-  padding-top: 0ex;
-  padding-bottom: 0ex; }
+  padding-top: 0.504ex;
+  padding-bottom: 0.504ex; }
   @media (min-width: 768px) {
     .p-y-spacer-2xs {
-      padding-top: 0ex;
-      padding-bottom: 0ex; } }
+      padding-top: 0.504ex;
+      padding-bottom: 0.504ex; } }
   .p-t-spacer-xs {
   padding-top: 0.63ex; }
   @media (min-width: 768px) {
@@ -550,7 +550,7 @@
   min-width: 100vw;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 300px; }
+  font-size: 16px; }
   * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -561,8 +561,6 @@
   list-style: none; }
   a {
   text-decoration: none; }
-  h3 {
-  font-weiht: normal; }
   abbr {
   text-decoration: none; }
   figure {
@@ -570,22 +568,167 @@
   margin: 0; }
   .hidden {
   display: none; }
-  svg:not(.dflt) path {
+  svg.fill path {
   fill: inherit;
   stroke: inherit; }
-  svg:not(.dflt) line {
+  svg.fill line {
   fill: none;
   stroke-linejoin: round;
   stroke-width: inherit;
   stroke: inherit; }
-  svg:not(.dflt) polyline {
+  svg.fill polyline {
   stroke-dasharray: 0;
   stroke-dashoffset: 0; }
-  svg:not(.dflt) circle {
+  svg.fill circle {
   fill: none;
   stroke-linejoin: round;
   stroke-width: inherit;
   stroke: inherit; }
+  .about-illustration {
+  position: relative;
+  margin-top: 4.2ex;
+  margin-bottom: 4.2ex; }
+  @media (min-width: 768px) {
+    .about-illustration {
+      margin-top: 6ex;
+      margin-bottom: 6ex; } }
+  .about-illustration img {
+    position: relative;
+    z-index: 2; }
+  .about-illustration:before {
+    position: absolute;
+    content: '';
+    right: 0;
+    top: -10%;
+    z-index: 1;
+    width: 53%;
+    height: 120%;
+    background: #131E3E; }
+  .about-illustration figcaption {
+    position: relative;
+    z-index: 2;
+    max-width: 460px;
+    padding-top: 2.8ex;
+    padding-bottom: 2.8ex;
+    padding-left: 2.8ex;
+    padding-right: 2.8ex; }
+  @media (min-width: 768px) {
+      .about-illustration figcaption {
+        padding-top: 4ex;
+        padding-bottom: 4ex; } }
+  @media (min-width: 768px) {
+      .about-illustration figcaption {
+        padding-left: 4ex;
+        padding-right: 4ex; } }
+  .about-illustration small, .about-illustration strong {
+    display: block; }
+  .about-illustration small {
+    color: #FF3F32; }
+  .about-illustration strong {
+    color: #FFF;
+    font-size: 4.6648ex; }
+  @media (min-width: 768px) {
+      .about-illustration strong {
+        font-size: 5.18687ex; } }
+  .container {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  max-width: 1024px; }
+  .enfase {
+  display: block;
+  color: #FF3F32;
+  text-align: center;
+  font-size: 3.332ex;
+  font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-top: 2.8ex; }
+  @media (min-width: 768px) {
+    .enfase {
+      font-size: 3.50464ex; } }
+  @media (min-width: 768px) {
+    .enfase {
+      margin-top: 4ex; } }
+  .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .space-around {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .learn-more {
+  color: #FFF; }
+  .logo {
+  display: block; }
+  .logo .ic-logo-trubr {
+    width: 181px;
+    height: 30px; }
+  #nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  #nav ul {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #nav ul a {
+      padding: 1ex 2ex;
+      color: #FFF; }
+  .product {
+  margin-left: 0.7ex;
+  margin-right: 0.7ex;
+  padding-left: 2.8ex;
+  padding-right: 2.8ex;
+  width: 33%;
+  min-width: 240px;
+  background: #FFF;
+  border-radius: 4px; }
+  @media (min-width: 768px) {
+    .product {
+      margin-left: 1ex;
+      margin-right: 1ex; } }
+  @media (min-width: 768px) {
+    .product {
+      padding-left: 4ex;
+      padding-right: 4ex; } }
+  .product h2 {
+    font-size: 3.332ex;
+    font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.2;
+    min-height: 60px; }
+  @media (min-width: 768px) {
+      .product h2 {
+        font-size: 3.50464ex; } }
+  .product P {
+    font-size: 2.38ex;
+    font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5; }
+  @media (min-width: 768px) {
+      .product P {
+        font-size: 2.368ex; } }
+  .social-icons span {
+  margin-right: 2ex;
+  display: block;
+  color: #FFF; }
+  .social-icons a {
+  display: inline-block; }
+  #intro .social-icons svg {
+  height: 20px;
+  width: 20px;
+  fill: #FFF; }
+  #intro .social-icons a {
+  margin-left: 0.72ex; }
   .swiper-container {
   margin-left: auto;
   margin-right: auto;
@@ -905,5 +1048,119 @@
     right: -1px;
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
+  .team-member {
+  margin-left: 0.7ex;
+  margin-right: 0.7ex;
+  width: 33%; }
+  @media (min-width: 768px) {
+    .team-member {
+      margin-left: 1ex;
+      margin-right: 1ex; } }
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; }
+  .team-member figcaption {
+    margin-top: 2.8ex;
+    text-align: center; }
+  @media (min-width: 768px) {
+      .team-member figcaption {
+        margin-top: 4ex; } }
+  .team-member h2, .team-member h3 {
+    margin: 0; }
+  .team-member h2 {
+    color: #FFF; }
+  .team-member h3 {
+    color: #FF3F32; }
+  #about {
+  padding-bottom: 6.3ex; }
+  @media (min-width: 768px) {
+    #about {
+      padding-bottom: 9ex; } }
+  #about .highlight {
+    margin: 0 2ex;
+    color: #FF3F32;
+    line-height: .8em;
+    font-size: 9.14301ex; }
+  @media (min-width: 768px) {
+      #about .highlight {
+        font-size: 11.36131ex; } }
+  #about article .grid {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  #about article p {
+    font-size: 2.38ex;
+    font-family: "Athelas-Regular",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4em; }
+  @media (min-width: 768px) {
+      #about article p {
+        font-size: 2.368ex; } }
+  #intro {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  padding: 0 0 3vh;
+  overflow: hidden;
+  background-image: linear-gradient(-140deg, #25386D 0%, #1C2B56 39%, #131E3E 100%); }
+  #intro .container.in {
+    margin: auto; }
+  #intro h1 {
+    margin: 0;
+    font-size: 13.82423ex;
+    font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    color: #FFF; }
+  @media (min-width: 768px) {
+      #intro h1 {
+        font-size: 19.5051ex; } }
+  #intro h2 {
+    font-size: 4.6648ex;
+    color: #FF3F32; }
+  @media (min-width: 768px) {
+      #intro h2 {
+        font-size: 5.18687ex; } }
+  #products-and-services {
+  padding-bottom: 6.3ex;
+  background: #131E3E; }
+  @media (min-width: 768px) {
+    #products-and-services {
+      padding-bottom: 9ex; } }
+  #products-and-services header {
+    color: #FFF; }
+  .section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .section-header h1 {
+    max-width: 640px;
+    font-size: 12.80021ex;
+    font-family: "Sentinel SSm A", "Sentinel SSm B", serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 0.9; }
+  @media (min-width: 768px) {
+      .section-header h1 {
+        font-size: 16.81474ex; } }
+  #team {
+  padding-bottom: 6.3ex;
+  background: #131E3E; }
+  @media (min-width: 768px) {
+    #team {
+      padding-bottom: 9ex; } }
+  #team header {
+    color: #FFF; }
 
 /*# sourceMappingURL=style.css.map*/

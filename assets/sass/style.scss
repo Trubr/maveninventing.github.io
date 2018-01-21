@@ -1,6 +1,7 @@
 
 // Colors
 @import "base/color/color-variables";
+
 // Mixins
 @import "base/_mixins.scss";
 
@@ -10,8 +11,9 @@
 // Spacing
 @import "base/spacing/spacing";
 
+// Reset and default
 @import "base/_defaults.scss";
 
 @import "elements/**/*.scss";
-@import "pages/**/*.scss";
 
+@import "section/**/*.scss";

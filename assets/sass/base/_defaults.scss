@@ -6,7 +6,7 @@ html, body{
   min-width: 100vw;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  margin-bottom: 300px;
+  font-size: 16px;
 }
 
 *{
@@ -24,9 +24,6 @@ a{
   text-decoration: none;
 }
 
-h3{
-  font-weiht: normal;
-}
 
 abbr{
   text-decoration: none;
@@ -41,8 +38,8 @@ figure{
   display: none;
 }
 
-svg:not(.dflt) {
-
+svg.fill{
+  
   path {
     fill: inherit;
     stroke: inherit;
