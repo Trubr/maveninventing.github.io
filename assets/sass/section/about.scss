@@ -5,6 +5,7 @@
 		@include m-x-spacer-($spacer-md);
 		color: $c7;
 		line-height: .8em;
+		@include heading-xlarge;
 		@include size--base-5;
 	}
 
@@ -22,7 +23,7 @@
 
 		p{
 			@include size--base-1;
-			@include font--secondary-medium;
+			@include font--secondary-regular;
 			line-height: 1.4em;
 		}
 	}

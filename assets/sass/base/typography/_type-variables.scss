@@ -5,14 +5,14 @@
 // Heading XXLarge
 @mixin heading-xxlarge {
   @include size--base-7;
-  @include font--primary-light;
+  @include font--primary-bold;
   line-height: 1;
 }
 
 // Heading XLarge
 @mixin heading-xlarge {
   @include size--base-6;
-  @include font--primary-light;
+  @include font--primary-bold;
   line-height: 0.9;
 }
 
@@ -26,28 +26,28 @@
 // Heading Medium
 @mixin heading-medium {
   @include size--base-2;
-  @include font--primary-regular;
+  @include font--primary-light;
   line-height: 1.2;
 }
 
 // Heading Small
 @mixin heading-small {
   @include size--base-2;
-  @include font--primary-medium;
+  @include font--primary-light;
   line-height: 1.2;
 }
 
 // Heading XSmall
 @mixin heading-xsmall {
   @include size--base-1;
-  @include font--primary-semibold;
+  @include font--primary-bold;
   line-height: 1.2;
 }
 
 // Heading XXSmall -- Serif
 @mixin heading-xxsmall--serif {
   @include size--base-0;
-  @include font--primary-semibold;
+  @include font--primary-bold;
   letter-spacing: 1px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -56,7 +56,7 @@
 // Heading XXSmall -- Sans
 @mixin heading-xxsmall--sans {
   @include size--base-0;
-  @include font--secondary-medium;
+  @include font--primary-light;
   letter-spacing: 1px;
   line-height: 1.4;
   text-transform: uppercase;
@@ -65,20 +65,20 @@
 // Body Large
 @mixin body-large {
   @include size--base-2;
-  @include font--primary-regular;
+  @include font--primary-light;
   line-height: 1.5;
 }
 
 // Body
 @mixin body {
   @include size--base-1;
-  @include font--primary-regular;
+  @include font--primary-light;
   line-height: 1.5;
 }
 
 // Fine Print
 @mixin fine-print {
   @include size--base-0;
-  @include font--primary-regular;
+  @include font--primary-light;
   line-height: 1.5;
 }
