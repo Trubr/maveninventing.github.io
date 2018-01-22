@@ -1,9 +1,8 @@
-.swiper-container {
+/* .swiper-container {
   margin-left: auto;
   margin-right: auto;
   position: relative;
   overflow: hidden;
-  /* Fix of Webkit flickering */
   z-index: 1;
 }
 .swiper-container-no-flexbox .swiper-slide {
@@ -48,7 +47,7 @@
   height: 100%;
   position: relative;
 }
-/* Auto Height */
+
 .swiper-container-autoheight,
 .swiper-container-autoheight .swiper-slide {
   height: auto;
@@ -57,7 +56,6 @@
   align-items: flex-start;
   transition-property: transform, height;
 }
-/* a11y */
 .swiper-container .swiper-notification {
   position: absolute;
   left: 0;
@@ -66,7 +64,7 @@
   opacity: 0;
   z-index: -1000;
 }
-/* IE10 Windows Phone 8 Fixes */
+
 .swiper-wp8-horizontal {
   -ms-touch-action: pan-y;
   touch-action: pan-y;
@@ -75,7 +73,7 @@
   -ms-touch-action: pan-x;
   touch-action: pan-x;
 }
-/* Arrows */
+
 .swiper-button-prev:not(.intouched),
 .swiper-button-next:not(.intouched) {
   position: absolute;
@@ -108,7 +106,6 @@
   left: auto;
 }
 
-/* Pagination Styles */
 .swiper-pagination {
   position: absolute;
   text-align: center;
@@ -119,13 +116,13 @@
 .swiper-pagination.swiper-pagination-hidden {
   opacity: 0;
 }
-/* Common Styles */
+
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: 100%;
 }
-/* Bullets */
+
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
@@ -168,7 +165,7 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 5px;
 }
-/* Progress */
+
 .swiper-pagination-progress {
   background: rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -207,7 +204,7 @@ button.swiper-pagination-bullet {
   background: #000;
 }
 
-/* Cube + Flip */
+
 .swiper-container-cube,
 .swiper-container-flip {
   overflow: visible;
@@ -245,7 +242,7 @@ button.swiper-pagination-bullet {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* Cube */
+
 .swiper-container-cube .swiper-slide {
   visibility: hidden;
   -webkit-transform-origin: 0 0;
@@ -280,7 +277,7 @@ button.swiper-pagination-bullet {
   filter: blur(50px);
   z-index: 0;
 }
-/* Fade */
+
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
   transition-timing-function: ease-out;
 }
@@ -318,7 +315,7 @@ button.swiper-pagination-bullet {
   max-height: 100%;
   object-fit: contain;
 }
-/* Scrollbar */
+
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
@@ -353,7 +350,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar-cursor-drag {
   cursor: move;
 }
-/* Preloader */
+
 .swiper-lazy-preloader {
   position: absolute;
   left: 50%;
@@ -412,3 +409,4 @@ button.swiper-pagination-bullet {
     }
 
 }
+*/

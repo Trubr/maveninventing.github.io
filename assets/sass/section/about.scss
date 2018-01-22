@@ -1,11 +1,16 @@
 #about{
 	@include p-b-spacer-($spacer-2xl);
-
+	
 	.highlight{
-		margin: 0 $spacer-md;
+		@include m-x-spacer-($spacer-md);
 		color: $c7;
 		line-height: .8em;
 		@include size--base-5;
+	}
+
+	header{
+		@extend %whiteTitle;
+		background-image: url(../assets/img/banner-about.jpg);
 	}
 
 	article{

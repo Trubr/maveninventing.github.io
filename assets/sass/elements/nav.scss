@@ -3,12 +3,14 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	@include p-y-spacer-($spacer-lg);
+	@include p-x-spacer-($spacer-lg);
 
 	ul{
 		align-items: center;
 
 		a{
-			padding: $spacer-sm $spacer-md;
+			padding: $spacer-md;
 			color: $white;
 		}
 	}

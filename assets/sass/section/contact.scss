@@ -1,6 +1,11 @@
 #contact{
 	@include p-b-spacer-($spacer-2xl);
 
+	header{
+		@extend %whiteTitle;
+		background-image: url(../assets/img/banner-about.jpg);
+	}
+
 	strong{
 		display: block;
 		text-align: center;

@@ -26,4 +26,9 @@
         color: $c7;
     }
 
+    .social-and-more{
+        @include p-y-spacer-($spacer-lg);
+        @include p-x-spacer-($spacer-lg);
+    }
+
 }

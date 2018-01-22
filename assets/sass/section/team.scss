@@ -3,7 +3,8 @@
 	background: $c3;
 
 	header {
-		color: $white;
+		@extend %whiteTitle;
+		background-image: url(../assets/img/banner-about.jpg);
 	}
 
 }
