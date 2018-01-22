@@ -4,6 +4,7 @@
 	width: 33%;
 	min-width: 240px;
 	background: $white;
+	color: $c3;
 	border-radius: 4px;
 
 	h2{
@@ -14,5 +15,5 @@
 	P{
 		@include body;
 	}
-	
+
 }

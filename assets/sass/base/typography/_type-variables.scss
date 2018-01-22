@@ -6,7 +6,7 @@
 @mixin heading-xxlarge {
   @include size--base-7;
   @include font--primary-bold;
-  line-height: 1;
+  line-height: 0.8;
 }
 
 // Heading XLarge
@@ -18,15 +18,15 @@
 
 // Heading Large
 @mixin heading-large {
-  @include size--base-4;
-  @include font--primary-light;
+  @include size--base-3;
+  @include font--primary-bold;
   line-height: 1.2;
 }
 
 // Heading Medium
 @mixin heading-medium {
   @include size--base-2;
-  @include font--primary-light;
+  @include font--primary-bold;
   line-height: 1.2;
 }
 
@@ -72,7 +72,7 @@
 // Body
 @mixin body {
   @include size--base-1;
-  @include font--primary-light;
+  @include font--secondary-regular;
   line-height: 1.5;
 }
 

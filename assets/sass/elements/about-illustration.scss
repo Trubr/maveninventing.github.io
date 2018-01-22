@@ -24,6 +24,8 @@
 		max-width: 460px;
 		@include p-y-spacer-($spacer-lg);
 		@include p-x-spacer-($spacer-lg);
+		@include font--primary-bold;
+		line-height: 0.9;
 	}
 
 	small,
@@ -37,6 +39,7 @@
 
 	strong{
 		color: $white;
+		@include p-t-spacer-($spacer-xs);
         @include size--base-3;
 	}
 

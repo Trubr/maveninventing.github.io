@@ -18,11 +18,13 @@
 	}
 
 	h2{
+		@include heading-medium;
 		color: $white;
 	}
 
 	h3{
 		color: $c7;
+		@include font--secondary-regular;
 	}
 
 }

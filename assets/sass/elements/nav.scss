@@ -10,8 +10,14 @@
 		align-items: center;
 
 		a{
+			@include heading-xsmall;
 			padding: $spacer-md;
 			color: $white;
+			transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+			&:hover{
+				color: $c7;
+			}
 		}
 	}
 }
