@@ -1,0 +1,30 @@
+.section-header{
+	position: relative;
+	@include m-b-spacer-($spacer-2xl);
+	display: flex;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+
+	background-position: center;
+	background-size: cover;
+	max-height: 320px;
+
+	&:not(.white){
+		background-color: $c3;
+	}
+
+
+	.header-bg{
+		z-index: 1;
+	}
+
+	h1{
+		margin: 0;
+		z-index: 2;
+		max-width: 640px;
+		@include m-y-spacer-($spacer-md);
+		@include heading-xlarge;
+	}
+	
+}

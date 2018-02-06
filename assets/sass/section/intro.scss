@@ -1,0 +1,36 @@
+#intro {
+    flex-direction: column;
+    height: 100vh;
+    min-height: 540px;
+    padding: 0 0 3vh;
+    overflow: hidden;
+    background-image: linear-gradient(-140deg,$c6 0%, $c2 39%, $c3 100%);
+
+    .container{
+
+        &.in{
+            margin: auto;
+        }
+
+    }
+
+    h1{
+        margin: 0;
+        @include m-b-spacer-($spacer-2xs);
+        @include heading-xxlarge;
+        color: $white;
+    }
+    
+    h2{
+        @include m-y-spacer-($spacer-none);
+        @include heading-large;
+        color: $c7;
+    }
+
+    .social-and-more{
+        @include heading-xsmall;
+        @include p-y-spacer-($spacer-md);
+        @include p-x-spacer-($spacer-lg);
+    }
+
+}

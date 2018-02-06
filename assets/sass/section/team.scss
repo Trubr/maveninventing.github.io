@@ -1,0 +1,10 @@
+#team{
+	@include p-b-spacer-($spacer-2xl);
+	background: $c3;
+
+	header {
+		@extend %whiteTitle;
+		background-image: url(../assets/img/banner-about.jpg);
+	}
+
+}

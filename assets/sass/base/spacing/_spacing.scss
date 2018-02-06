@@ -1,0 +1,129 @@
+// ----------------------------------------
+// Absolute Horizontal and Vertical Spacing
+// Ether used the core typeface to generate sizes for the system spacing.
+// $cap is defined as the x-height of the $b0 type size
+// ----------------------------------------
+
+// Create spacing sizes tied to type
+
+$cap: .9ex;     // Cap-height of the $b0 font size
+
+$spacer-none: 0;
+$spacer-2xs: $cap * .8;
+$spacer-xs: $cap; 
+$spacer-sm: round($cap * 1.5);
+$spacer-md: round($cap * 2.5);
+$spacer-lg: round($cap * 4);
+$spacer-xl: round($cap * 6.5);
+$spacer-2xl: round($cap * 10.5);
+
+$sizes: (
+  none: $spacer-none,
+  2xs: $spacer-2xs,
+  xs: $spacer-xs,
+  sm: $spacer-sm,
+  md: $spacer-md,
+  lg: $spacer-lg,
+  xl: $spacer-xl,
+  2xl: $spacer-2xl
+);
+
+// Design choice to scale the text by this value at mobile
+$mobile-scale: .7;
+
+// Mixins for the spacers.
+// usage: @include m-t-spacer-($spacer-md);
+
+@mixin m-t-spacer-($value) {
+  margin-top: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-top: $value;
+  }
+}
+
+@mixin m-b-spacer-($value) {
+  margin-bottom: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-bottom: $value;
+  }
+}
+
+@mixin m-l-spacer-($value) {
+  margin-left: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-left: $value;
+  }
+}
+
+@mixin m-r-spacer-($value) {
+  margin-right: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-right: $value;
+  }
+}
+
+@mixin m-x-spacer-($value) {
+  margin-left: $value * $mobile-scale;
+  margin-right: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-left: $value;
+    margin-right: $value;
+  }
+}
+
+@mixin m-y-spacer-($value) {
+  margin-top: $value * $mobile-scale;
+  margin-bottom: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+
+@mixin p-t-spacer-($value) {
+  padding-top: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    padding-top: $value;
+  }
+}
+
+@mixin p-b-spacer-($value) {
+  padding-bottom: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    padding-bottom: $value;
+  }
+}
+
+@mixin p-l-spacer-($value) {
+  padding-left: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    padding-left: $value;
+  }
+}
+
+@mixin p-r-spacer-($value) {
+  padding-right: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    padding-right: $value;
+  }
+}
+
+@mixin p-x-spacer-($value) {
+  padding-left: $value * $mobile-scale;
+  padding-right: $value * $mobile-scale;
+  @include breakpoint(sm) {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}
+
+@mixin p-y-spacer-($value) {
+  padding-top: $value * $mobile-scale;
+  padding-bottom: $value * $mobile-scale;
+
+  @include breakpoint(sm) {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+}

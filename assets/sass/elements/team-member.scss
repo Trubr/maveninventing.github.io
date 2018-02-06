@@ -1,0 +1,30 @@
+.team-member{
+	@include m-x-spacer-($spacer-sm);
+	width: 33%;
+
+	img{
+		width: 100%;
+		height: auto;
+		border-radius: 5px;
+	}
+	
+	figcaption{
+		@include m-t-spacer-($spacer-lg);
+		text-align: center;
+	}
+
+	h2, h3{
+		margin: 0;
+	}
+
+	h2{
+		@include heading-medium;
+		color: $white;
+	}
+
+	h3{
+		color: $c7;
+		@include font--secondary-regular;
+	}
+
+}

@@ -1,0 +1,19 @@
+.product{
+	@include m-x-spacer-($spacer-sm);
+	@include p-x-spacer-($spacer-lg);
+	width: 33%;
+	min-width: 240px;
+	background: $white;
+	color: $c3;
+	border-radius: 4px;
+
+	h2{
+		@include heading-medium;
+		min-height: 60px;
+	}
+
+	P{
+		@include body;
+	}
+
+}

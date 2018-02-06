@@ -1,0 +1,23 @@
+#nav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include p-y-spacer-($spacer-lg);
+	@include p-x-spacer-($spacer-lg);
+
+	ul{
+		align-items: center;
+
+		a{
+			@include heading-xsmall;
+			padding: $spacer-md;
+			color: $white;
+			transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+			&:hover{
+				color: $c7;
+			}
+		}
+	}
+}

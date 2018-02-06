@@ -1,0 +1,46 @@
+.about-illustration {
+	position: relative;
+	@include m-y-spacer-($spacer-xl);
+
+	img{
+		position: relative;
+		z-index: 2;
+	}
+
+	&:before{
+		@include pseudo;
+		right: 0;
+		top: -10%;
+		z-index: 1;
+		width: 53%;
+		height: 120%;
+		background: $c3;
+	}
+
+
+	figcaption{
+		position: relative;
+		z-index: 2;
+		max-width: 460px;
+		@include p-y-spacer-($spacer-lg);
+		@include p-x-spacer-($spacer-lg);
+		@include font--primary-bold;
+		line-height: 0.9;
+	}
+
+	small,
+	strong {
+		display: block;
+	}
+
+	small{
+		color: $c7;
+	}
+
+	strong{
+		color: $white;
+		@include p-t-spacer-($spacer-xs);
+        @include size--base-3;
+	}
+
+}

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "GTWalsheimLight";
+  src: url("../assets/fonts/GT-Walsheim-Light.woff2") format("woff2"), url("../assets/fonts/GT-Walsheim-Light.woff") format("woff"), url("../assets/fonts/GT-Walsheim-Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "GTWalsheimBold";
+  src: url("../assets/fonts/GT-Walsheim-Bold.woff2") format("woff2"), url("../assets/fonts/GT-Walsheim-Bold.woff") format("woff"), url("../assets/fonts/GT-Walsheim-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font--primary-light {
+  font-family : "GTWalsheimLight", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+@mixin font--primary-bold {
+  font-family: "GTWalsheimBold", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin font--secondary-regular {
+  font-family: "Athelas-Regular",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}

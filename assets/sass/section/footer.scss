@@ -1,0 +1,8 @@
+footer{
+	@include p-y-spacer-($spacer-md);
+	background: $c3;
+	justify-content: center;
+	align-items: center;
+	color: $white;
+	font-weight: bold;
+}
