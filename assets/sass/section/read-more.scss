@@ -1,4 +1,5 @@
 %h1Center{
+
 	h1 {
 		margin: 0;
 		width: 100%;
@@ -6,20 +7,41 @@
 		color: $c4;
 		line-height: 0.75em;
 	}
+
 }
 
+
+%containerBg{
+	position: relative;
+	margin-top: 90px;
+
+	.container.bg{
+		position: absolute;
+		left: 50%;
+		margin-top: -60px;
+		transform: translateX(-50%);
+		height: calc(100% + 90px);
+		background: #25386D;
+	}
+}
 
 #read-more {
 	@include p-y-spacer-($spacer-2xl);
 	background: #F8FBFE;
 
-	.section-header {
-		text-align: left;
-
-		@extend %h1Center;
-
+	.medium-wrp{
+		@extend %containerBg;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1700px;
+		@include p-x-spacer-($spacer-lg);
 	}
 
+	.section-header {
+		text-align: left;
+		@extend %h1Center;
+	}
+	
 
 	.medium-post{
 		position: relative;

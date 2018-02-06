@@ -1,5 +1,6 @@
 #watch-more{
 	background: #F8FBFE;
+	@include p-y-spacer-($spacer-2xl);
 
 	.section-header{
 		text-align: right;
@@ -26,6 +27,7 @@
 
 
 	.videos-wrp{
+		@extend %containerBg;
 		margin-left: auto;
 		margin-right: auto;
 		@include m-b-spacer-($spacer-2xl);
