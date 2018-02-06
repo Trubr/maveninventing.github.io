@@ -83,17 +83,17 @@ export default () => {
 
 	const mediumPost = post => {
 
-		console.log(post)
+		const excerpt = post['content:encoded'].substring(0, 240) + ' ...'
+		const cleanExcerpt = excerpt.replace(/<\/?[^>]+(>|$)/g, "")
 
 		return `<article class="medium-post swiper-slide">
-					<a href="${post.link}" target="_blank">
+					<a href="${post.link}" target="_blank" rel="noopener">
 						<h1>${post.title}</h1>
+						<p>${cleanExcerpt}</p>
 						<span>continue reading</small>
 					</a>
 				</article>`
 	}
-
-
 
 
 	const popule = res =>{

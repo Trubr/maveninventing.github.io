@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -210,271 +210,6 @@ exports.default = function (destination) {
 "use strict";
 
 
-var _domready = __webpack_require__(3);
-
-var _domready2 = _interopRequireDefault(_domready);
-
-var _scrollDown = __webpack_require__(4);
-
-var _scrollDown2 = _interopRequireDefault(_scrollDown);
-
-var _menuAnchors = __webpack_require__(5);
-
-var _menuAnchors2 = _interopRequireDefault(_menuAnchors);
-
-var _youtube = __webpack_require__(7);
-
-var _youtube2 = _interopRequireDefault(_youtube);
-
-var _medium = __webpack_require__(10);
-
-var _medium2 = _interopRequireDefault(_medium);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-(0, _domready2.default)(function (_) {
-	(0, _scrollDown2.default)();
-
-	// smooth animations on menu anchors
-	(0, _menuAnchors2.default)();
-
-	(0, _youtube2.default)();
-	(0, _medium2.default)();
-});
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-/*!
-  * domready (c) Dustin Diaz 2014 - License MIT
-  */
-!function (name, definition) {
-
-  if (true) module.exports = definition();else if (typeof define == 'function' && _typeof(define.amd) == 'object') define(definition);else this[name] = definition();
-}('domready', function () {
-
-  var fns = [],
-      _listener,
-      doc = document,
-      hack = doc.documentElement.doScroll,
-      domContentLoaded = 'DOMContentLoaded',
-      loaded = (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState);
-
-  if (!loaded) doc.addEventListener(domContentLoaded, _listener = function listener() {
-    doc.removeEventListener(domContentLoaded, _listener);
-    loaded = 1;
-    while (_listener = fns.shift()) {
-      _listener();
-    }
-  });
-
-  return function (fn) {
-    loaded ? setTimeout(fn, 0) : fns.push(fn);
-  };
-});
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _helpers = __webpack_require__(0);
-
-var _scrollIt = __webpack_require__(1);
-
-var _scrollIt2 = _interopRequireDefault(_scrollIt);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var getNextNode = function getNextNode(parent) {
-
-	var nextSibling = parent.nextSibling;
-
-	while (nextSibling && nextSibling.nodeType != 1) {
-		nextSibling = nextSibling.nextSibling;
-	}
-
-	return nextSibling;
-};
-
-exports.default = function () {
-
-	var scrollDown = (0, _helpers.the)('.learn-more');
-	var target = getNextNode(scrollDown.parentNode.parentNode);
-
-	scrollDown.addEventListener('click', function () {
-		return (0, _scrollIt2.default)(target, 400, 'easeInOutQuart');
-	}, true);
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _helpers = __webpack_require__(0);
-
-var _scrollIt = __webpack_require__(1);
-
-var _scrollIt2 = _interopRequireDefault(_scrollIt);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-
-	var anchors = (0, _helpers.all)('.anchor');
-	var targets = [];
-
-	(0, _helpers.forEach)(anchors, function (anchor) {
-
-		targets.push({
-			anchor: anchor.getAttribute('href'),
-			target: (0, _helpers.the)(anchor.getAttribute('href'))
-		});
-
-		anchor.addEventListener('click', function (e) {
-
-			e.preventDefault();
-			e.stopPropagation();
-
-			var selector = e.target.getAttribute('href');
-			var target = targets.find(function (target) {
-				return target.anchor == selector;
-			});
-
-			(0, _scrollIt2.default)(target.target, 400, 'easeInOutQuart');
-		}, true);
-	});
-};
-
-/***/ }),
-/* 6 */,
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _helpers = __webpack_require__(0);
-
-var _swiper = __webpack_require__(8);
-
-var _swiper2 = _interopRequireDefault(_swiper);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-
-	var key = 'AIzaSyAQ7gLbb5EBJeCYTpBsBR5NevCelpqxn2o';
-	var id = 'UCXILlHWIzxaCyw13hR52JMQ';
-
-	var apiUrl = 'https://www.googleapis.com/youtube/v3/search?key=' + key + '&channelId=' + id + '&part=snippet,id&order=date&maxResults=5';
-
-	// const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${key}&part=contentDetails`
-
-	var fetcher = function fetcher() {
-
-		return new Promise(function (resolve, reject) {
-
-			var req = new XMLHttpRequest();
-
-			req.open('GET', apiUrl, true);
-
-			req.onreadystatechange = function () {
-
-				if (req.readyState == 4) {
-
-					if (req.status == 200) resolve(JSON.parse(req.responseText));else reject(Error(req.statusText));
-				}
-			};
-
-			req.onerror = function () {
-				return reject(Error("network error"));
-			};
-
-			req.send();
-		});
-	};
-
-	var carrousel = (0, _helpers.the)('#watch-more .swiper-container');
-
-	var swiper = new _swiper2.default(carrousel, {
-		init: false,
-		slidesPerView: 5,
-		spaceBetween: 20,
-		slidesPerGroup: 5,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		breakpoints: {
-			480: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 0
-			},
-			1240: {
-				slidesPerView: 3,
-				slidesPerGroup: 3,
-				spaceBetween: 30
-			}
-		}
-	});
-
-	swiper.on('init', function () {
-		return carrousel.classList.add('active');
-	});
-
-	var videoElement = function videoElement(link, image, video) {
-		return '<div class="video-youtube swiper-slide">\n\t\t\t<a href="https://www.youtube.com/watch?v=' + link + '" target="_blank">\n\t\t\t\t<figure>\n\t\t\t\t\t<img src="' + image.high.url + '" alt="' + video.snippet.title + '" height="' + image.high.height + '" width="' + image.high.width + '" />\n\t\t\t\t</figure>\n\t\t\t</a>\n\t\t </div>';
-	};
-
-	fetcher().then(function (res) {
-
-		var thumbs = [];
-
-		res.items.forEach(function (video) {
-			var thumb = videoElement(video.id.videoId, video.snippet.thumbnails, video);
-			thumbs.push(thumb);
-		});
-
-		swiper.appendSlide(thumbs);
-
-		setTimeout(function (_) {
-			return swiper.init();
-		}, 500);
-	});
-};
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -493,7 +228,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                                                                                                                                                                                                                                                                                * Released on: November 7, 2017
                                                                                                                                                                                                                                                                                */
 
-var _dom = __webpack_require__(9);
+var _dom = __webpack_require__(8);
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
@@ -6935,7 +6670,271 @@ Swiper$1.components = [Device$2, Support$2, Browser$2, Resize, Observer$1, Virtu
 exports.default = Swiper$1;
 
 /***/ }),
-/* 9 */
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _domready = __webpack_require__(4);
+
+var _domready2 = _interopRequireDefault(_domready);
+
+var _scrollDown = __webpack_require__(5);
+
+var _scrollDown2 = _interopRequireDefault(_scrollDown);
+
+var _menuAnchors = __webpack_require__(6);
+
+var _menuAnchors2 = _interopRequireDefault(_menuAnchors);
+
+var _youtube = __webpack_require__(7);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+var _medium = __webpack_require__(9);
+
+var _medium2 = _interopRequireDefault(_medium);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _domready2.default)(function (_) {
+	(0, _scrollDown2.default)();
+
+	// smooth animations on menu anchors
+	(0, _menuAnchors2.default)();
+
+	(0, _youtube2.default)();
+	(0, _medium2.default)();
+});
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*!
+  * domready (c) Dustin Diaz 2014 - License MIT
+  */
+!function (name, definition) {
+
+  if (true) module.exports = definition();else if (typeof define == 'function' && _typeof(define.amd) == 'object') define(definition);else this[name] = definition();
+}('domready', function () {
+
+  var fns = [],
+      _listener,
+      doc = document,
+      hack = doc.documentElement.doScroll,
+      domContentLoaded = 'DOMContentLoaded',
+      loaded = (hack ? /^loaded|^c/ : /^loaded|^i|^c/).test(doc.readyState);
+
+  if (!loaded) doc.addEventListener(domContentLoaded, _listener = function listener() {
+    doc.removeEventListener(domContentLoaded, _listener);
+    loaded = 1;
+    while (_listener = fns.shift()) {
+      _listener();
+    }
+  });
+
+  return function (fn) {
+    loaded ? setTimeout(fn, 0) : fns.push(fn);
+  };
+});
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _helpers = __webpack_require__(0);
+
+var _scrollIt = __webpack_require__(1);
+
+var _scrollIt2 = _interopRequireDefault(_scrollIt);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var getNextNode = function getNextNode(parent) {
+
+	var nextSibling = parent.nextSibling;
+
+	while (nextSibling && nextSibling.nodeType != 1) {
+		nextSibling = nextSibling.nextSibling;
+	}
+
+	return nextSibling;
+};
+
+exports.default = function () {
+
+	var scrollDown = (0, _helpers.the)('.learn-more');
+	var target = getNextNode(scrollDown.parentNode.parentNode);
+
+	scrollDown.addEventListener('click', function () {
+		return (0, _scrollIt2.default)(target, 400, 'easeInOutQuart');
+	}, true);
+};
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _helpers = __webpack_require__(0);
+
+var _scrollIt = __webpack_require__(1);
+
+var _scrollIt2 = _interopRequireDefault(_scrollIt);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+
+	var anchors = (0, _helpers.all)('.anchor');
+	var targets = [];
+
+	(0, _helpers.forEach)(anchors, function (anchor) {
+
+		targets.push({
+			anchor: anchor.getAttribute('href'),
+			target: (0, _helpers.the)(anchor.getAttribute('href'))
+		});
+
+		anchor.addEventListener('click', function (e) {
+
+			e.preventDefault();
+			e.stopPropagation();
+
+			var selector = e.target.getAttribute('href');
+			var target = targets.find(function (target) {
+				return target.anchor == selector;
+			});
+
+			(0, _scrollIt2.default)(target.target, 400, 'easeInOutQuart');
+		}, true);
+	});
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _helpers = __webpack_require__(0);
+
+var _swiper = __webpack_require__(2);
+
+var _swiper2 = _interopRequireDefault(_swiper);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+
+	var key = 'AIzaSyAQ7gLbb5EBJeCYTpBsBR5NevCelpqxn2o';
+	var id = 'UCXILlHWIzxaCyw13hR52JMQ';
+
+	var apiUrl = 'https://www.googleapis.com/youtube/v3/search?key=' + key + '&channelId=' + id + '&part=snippet,id&order=date&maxResults=5';
+
+	// const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${key}&part=contentDetails`
+
+	var fetcher = function fetcher() {
+
+		return new Promise(function (resolve, reject) {
+
+			var req = new XMLHttpRequest();
+
+			req.open('GET', apiUrl, true);
+
+			req.onreadystatechange = function () {
+
+				if (req.readyState == 4) {
+
+					if (req.status == 200) resolve(JSON.parse(req.responseText));else reject(Error(req.statusText));
+				}
+			};
+
+			req.onerror = function () {
+				return reject(Error("network error"));
+			};
+
+			req.send();
+		});
+	};
+
+	var carrousel = (0, _helpers.the)('#watch-more .swiper-container');
+
+	var swiper = new _swiper2.default(carrousel, {
+		init: false,
+		slidesPerView: 5,
+		spaceBetween: 20,
+		slidesPerGroup: 5,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+		breakpoints: {
+			480: {
+				slidesPerView: 1,
+				slidesPerGroup: 1,
+				spaceBetween: 0
+			},
+			1240: {
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 30
+			}
+		}
+	});
+
+	swiper.on('init', function () {
+		return carrousel.classList.add('active');
+	});
+
+	var videoElement = function videoElement(link, image, video) {
+		return '<div class="video-youtube swiper-slide">\n\t\t\t<a href="https://www.youtube.com/watch?v=' + link + '" target="_blank" rel="noopener">\n\t\t\t\t<figure>\n\t\t\t\t\t<img src="' + image.high.url + '" alt="' + video.snippet.title + '" height="' + image.high.height + '" width="' + image.high.width + '" />\n\t\t\t\t</figure>\n\t\t\t</a>\n\t\t </div>';
+	};
+
+	fetcher().then(function (res) {
+
+		var thumbs = [];
+
+		res.items.forEach(function (video) {
+			var thumb = videoElement(video.id.videoId, video.snippet.thumbnails, video);
+			thumbs.push(thumb);
+		});
+
+		swiper.appendSlide(thumbs);
+
+		setTimeout(function (_) {
+			return swiper.init();
+		}, 500);
+	});
+};
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8532,7 +8531,7 @@ exports.resize = resize;
 exports.scroll = scroll;
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8544,7 +8543,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _helpers = __webpack_require__(0);
 
-var _swiper = __webpack_require__(8);
+var _swiper = __webpack_require__(2);
 
 var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -8628,9 +8627,10 @@ exports.default = function () {
 
 	var mediumPost = function mediumPost(post) {
 
-		console.log(post);
+		var excerpt = post['content:encoded'].substring(0, 240) + ' ...';
+		var cleanExcerpt = excerpt.replace(/<\/?[^>]+(>|$)/g, "");
 
-		return '<article class="medium-post swiper-slide">\n\t\t\t\t\t<a href="' + post.link + '" target="_blank">\n\t\t\t\t\t\t<h1>' + post.title + '</h1>\n\t\t\t\t\t\t<span>continue reading</small>\n\t\t\t\t\t</a>\n\t\t\t\t</article>';
+		return '<article class="medium-post swiper-slide">\n\t\t\t\t\t<a href="' + post.link + '" target="_blank" rel="noopener">\n\t\t\t\t\t\t<h1>' + post.title + '</h1>\n\t\t\t\t\t\t<p>' + cleanExcerpt + '</p>\n\t\t\t\t\t\t<span>continue reading</small>\n\t\t\t\t\t</a>\n\t\t\t\t</article>';
 	};
 
 	var popule = function popule(res) {
@@ -8654,6 +8654,7 @@ exports.default = function () {
 };
 
 /***/ }),
+/* 10 */,
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 

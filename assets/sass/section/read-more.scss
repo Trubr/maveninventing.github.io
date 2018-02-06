@@ -10,12 +10,51 @@
 
 
 #read-more {
-	@include m-y-spacer-($spacer-2xl);
+	@include p-y-spacer-($spacer-2xl);
+	background: #F8FBFE;
 
 	.section-header {
 		text-align: left;
 
 		@extend %h1Center;
+
+	}
+
+
+	.medium-post{
+		position: relative;
+		@include p-t-spacer-($spacer-md);
+		@include p-b-spacer-($spacer-xl);
+		@include p-x-spacer-($spacer-md);
+		background: $white;
+		border-radius: 5px;
+
+		h1{
+			margin: 0 0 10px;
+			font-size: 20px;
+			color: #131E3E;
+			letter-spacing: 0;
+			line-height: 1.2em;
+			@include font--primary-bold;
+		}
+
+		p{
+			@include font--secondary-regular;
+			font-size: 14px;
+			color: #131E3E;
+			letter-spacing: 0;
+			line-height: 1.1em;
+		}
+
+		span{
+			position: absolute;
+			bottom: 20px;
+			@include font--primary-bold;
+			font-size: 10px;
+			color: #3E578A;
+			letter-spacing: 0;
+			line-height: 10px;
+		}
 
 	}
 

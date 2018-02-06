@@ -69,7 +69,7 @@ export default () => {
 
 	const videoElement = (link, image, video) => {
 		return `<div class="video-youtube swiper-slide">
-			<a href="https://www.youtube.com/watch?v=${link}" target="_blank">
+			<a href="https://www.youtube.com/watch?v=${link}" target="_blank" rel="noopener">
 				<figure>
 					<img src="${image.high.url}" alt="${video.snippet.title}" height="${image.high.height}" width="${image.high.width}" />
 				</figure>

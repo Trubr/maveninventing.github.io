@@ -1107,16 +1107,69 @@ footer {
   line-height: 0.75em; }
 
 #read-more {
-  margin-top: 6.3ex;
-  margin-bottom: 6.3ex; }
+  padding-top: 6.3ex;
+  padding-bottom: 6.3ex;
+  background: #F8FBFE; }
 
 @media (min-width: 768px) {
     #read-more {
-      margin-top: 9ex;
-      margin-bottom: 9ex; } }
+      padding-top: 9ex;
+      padding-bottom: 9ex; } }
 
 #read-more .section-header {
     text-align: left; }
+
+#read-more .medium-post {
+    position: relative;
+    padding-top: 1.4ex;
+    padding-bottom: 4.2ex;
+    padding-left: 1.4ex;
+    padding-right: 1.4ex;
+    background: #FFF;
+    border-radius: 5px; }
+
+@media (min-width: 768px) {
+      #read-more .medium-post {
+        padding-top: 2ex; } }
+
+@media (min-width: 768px) {
+      #read-more .medium-post {
+        padding-bottom: 6ex; } }
+
+@media (min-width: 768px) {
+      #read-more .medium-post {
+        padding-left: 2ex;
+        padding-right: 2ex; } }
+
+#read-more .medium-post h1 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #131E3E;
+      letter-spacing: 0;
+      line-height: 1.2em;
+      font-family: "GTWalsheimBold", sans-serif;
+      font-style: normal;
+      font-weight: 600; }
+
+#read-more .medium-post p {
+      font-family: "Athelas-Regular",sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      color: #131E3E;
+      letter-spacing: 0;
+      line-height: 1.1em; }
+
+#read-more .medium-post span {
+      position: absolute;
+      bottom: 20px;
+      font-family: "GTWalsheimBold", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 10px;
+      color: #3E578A;
+      letter-spacing: 0;
+      line-height: 10px; }
 
 .section-header {
   position: relative;
@@ -1177,39 +1230,42 @@ footer {
 #team header {
     background-image: url(../assets/img/banner-about.jpg); }
 
+#watch-more {
+  background: #F8FBFE; }
+
 #watch-more .section-header {
-  text-align: right; }
+    text-align: right; }
 
 #watch-more .swiper-container:not(.active) {
-  opacity: 0;
-  -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) opacity;
-  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) opacity; }
+    opacity: 0;
+    -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) opacity;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) opacity; }
 
 #watch-more .swiper-slide a {
-  width: 100%; }
+    width: 100%; }
 
 #watch-more .swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3)); }
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.3)); }
 
 #watch-more .videos-wrp {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6.3ex;
-  max-width: 1700px;
-  padding-left: 2.8ex;
-  padding-right: 2.8ex; }
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6.3ex;
+    max-width: 1700px;
+    padding-left: 2.8ex;
+    padding-right: 2.8ex; }
 
 @media (min-width: 768px) {
-    #watch-more .videos-wrp {
-      margin-bottom: 9ex; } }
+      #watch-more .videos-wrp {
+        margin-bottom: 9ex; } }
 
 @media (min-width: 768px) {
-    #watch-more .videos-wrp {
-      padding-left: 4ex;
-      padding-right: 4ex; } }
+      #watch-more .videos-wrp {
+        padding-left: 4ex;
+        padding-right: 4ex; } }
 
 /*# sourceMappingURL=style.css.map*/
