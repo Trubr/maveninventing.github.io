@@ -13,6 +13,8 @@
 	}
 
 	.swiper-slide{
+		min-width: 240px;
+
 		a{
 			width: 100%;
 		}
@@ -36,4 +38,17 @@
 
 	}
 
+	@extend %navigation;
+
+	.swiper-button-prev {
+		top: 20px;
+		right:65px;
+		left: auto;
+	}
+
+	.swiper-button-next {
+		top: 20px;
+		right: 15;
+		left: auto;
+	}
 }

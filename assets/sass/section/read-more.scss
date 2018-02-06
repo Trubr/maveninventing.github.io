@@ -11,6 +11,31 @@
 }
 
 
+%navigation{
+
+	nav{
+		position: relative;
+		@include p-x-spacer-($spacer-lg);
+		height: 40px;
+		margin-bottom: 25px;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+		height: 50px;
+		width: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $c2;
+		font-size: 32px;
+		color: #fff;
+		@include font--primary-light;
+	}
+
+}
+
+
 %containerBg{
 	position: relative;
 	margin-top: 90px;
@@ -18,9 +43,9 @@
 	.container.bg{
 		position: absolute;
 		left: 50%;
-		margin-top: -60px;
+		margin-top: -20px;
 		transform: translateX(-50%);
-		height: calc(100% + 90px);
+		height: calc(100% + 60px);
 		background: #25386D;
 	}
 }
@@ -78,6 +103,15 @@
 			line-height: 10px;
 		}
 
+	}
+
+	@extend %navigation;
+
+	.swiper-button-prev{
+		left: 15;
+	}
+	.swiper-button-next {
+		left: 65px;
 	}
 
 }
