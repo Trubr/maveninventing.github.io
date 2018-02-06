@@ -1,0 +1,36 @@
+#watch-more{
+
+	.section-header{
+		text-align: right;
+		@extend %h1Center;
+	}
+
+	.swiper-container:not(.active){
+		opacity: 0;
+		transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1) opacity;
+	}
+
+	.swiper-slide{
+		a{
+			width: 100%;
+		}
+
+		img{
+			width: 100%;
+			height: auto;
+			border-radius: 5px;
+			filter:drop-shadow(0 2px 2px rgba(#000, 0.3));
+		}
+	}
+
+
+	.videos-wrp{
+		margin-left: auto;
+		margin-right: auto;
+		@include m-b-spacer-($spacer-2xl);
+		max-width: 1700px;
+		@include p-x-spacer-($spacer-lg);
+
+	}
+
+}

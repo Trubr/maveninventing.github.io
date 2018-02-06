@@ -5,10 +5,15 @@
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-	background-color: $c3;
+
 	background-position: center;
 	background-size: cover;
 	max-height: 320px;
+
+	&:not(.white){
+		background-color: $c3;
+	}
+
 
 	.header-bg{
 		z-index: 1;

@@ -31,16 +31,16 @@
 
       <ul class="grid space-between">
         <li>
-          <a href="#">about</a>
+          <a class="anchor" href="#about">about</a>
         </li>
         <li>
-          <a href="#">Products & Services</a>
+          <a class="anchor" href="#products-and-services">Products & Services</a>
         </li>
         <li>
-          <a href="#">Team Contact</a>
+          <a class="anchor" href="#team">Team</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a class="anchor" href="#contact">Contact</a>
         </li>
       </ul>
 
@@ -143,6 +143,41 @@
 
       </section>
 
+      <section id="read-more">
+        
+        <header class="section-header white container">
+            <h1>read<br />more</h1>
+        </header>
+
+        <div class="grid space-between medium-wrp">
+          <div class="swiper-container">
+            <div class="swiper-button-next">?</div>
+            <div class="swiper-button-prev">?</div>
+            <div class="swiper-wrapper"></div>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section id="watch-more">
+
+        <header class="section-header white container">
+            <h1>watch<br />more</h1>  
+        </header>
+
+        <div class="grid space-between videos-wrp">
+            <div class="swiper-container">
+                <nav>
+                  <div class="swiper-button-next">?</div>
+                  <div class="swiper-button-prev">?</div>
+                </nav>
+                <div class="swiper-wrapper"></div>
+            </div>
+        </div>
+
+      </section>
+
       <section id="team">
         <header class="section-header">
           <h1>team</h1>
@@ -241,6 +276,23 @@
 
   </body>
 
+  <script src="https://apis.google.com/js/platform.js?onload=init"></script>
   <script src="public/script.js"></script>
+   <!-- /https://medium.com/feed/trubr -->
+
+  <!-- <script>
+    
+    const key = ''
+    const id = ''
+
+    var OAUTH2_CLIENT_ID = '__YOUR_CLIENT_ID__';
+    var OAUTH2_SCOPES = [
+      'https://www.googleapis.com/auth/youtube'
+    ];
+
+    const url = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${id}&part=snippet,id&order=date&maxResults=20`
+
+    
+  </script> -->
 
 </html>

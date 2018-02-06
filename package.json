@@ -38,5 +38,8 @@
     "precss": "^2.0.0",
     "sass-loader": "^6.0.6",
     "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "rss-parser": "^3.1.1"
   }
 }
