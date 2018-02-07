@@ -74,6 +74,11 @@ export default () => {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 30
+			},
+			1480: {
+				slidesPerView: 4,
+				slidesPerGroup: 4,
+				spaceBetween: 30
 			}
 		}
 	})
@@ -83,7 +88,7 @@ export default () => {
 
 	const mediumPost = post => {
 
-		const excerpt = post['content:encoded'].substring(0, 240) + ' ...'
+		const excerpt = post['content:encoded'].substring(0, 290) + ' […]'
 		const cleanExcerpt = excerpt.replace(/<\/?[^>]+(>|$)/g, "")
 
 		return `<article class="medium-post swiper-slide">

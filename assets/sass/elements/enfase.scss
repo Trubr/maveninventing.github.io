@@ -2,6 +2,12 @@
 	display: block;
 	color: $c7;
 	text-align: center;
-	@include body-large;
-	@include m-t-spacer-($spacer-lg);
+	@include heading-xsmall;
+	@include m-t-spacer-($spacer-xl);
+	//@include m-b-spacer-($spacer-xs);
+}
+
+
+[href="#contact"]{
+	color: $white;
 }

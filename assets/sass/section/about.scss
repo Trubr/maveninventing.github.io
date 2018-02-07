@@ -1,5 +1,6 @@
 #about{
 	@include p-b-spacer-($spacer-2xl);
+	background: $c9;
 	
 	.highlight{
 		@include m-x-spacer-($spacer-md);
@@ -24,7 +25,8 @@
 		p{
 			@include size--base-1;
 			@include font--secondary-regular;
-			line-height: 1.4em;
+			line-height: 1.5em;
+			color: $c4;
 		}
 	}
 

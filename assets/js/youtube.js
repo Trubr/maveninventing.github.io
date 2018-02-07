@@ -60,6 +60,11 @@ export default () => {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
 				spaceBetween: 30
+			},
+			1480: {
+				slidesPerView: 4,
+				slidesPerGroup: 4,
+				spaceBetween: 30
 			}
 		}
 	})

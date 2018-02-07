@@ -138,20 +138,23 @@ svg.fill circle {
   display: block;
   color: #FF3F32;
   text-align: center;
-  font-size: 3.332ex;
-  font-family: "GTWalsheimLight", sans-serif;
+  font-size: 2.38ex;
+  font-family: "GTWalsheimBold", sans-serif;
   font-style: normal;
-  font-weight: 300;
-  line-height: 1.5;
-  margin-top: 2.8ex; }
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 4.2ex; }
 
 @media (min-width: 768px) {
     .enfase {
-      font-size: 3.50464ex; } }
+      font-size: 2.368ex; } }
 
 @media (min-width: 768px) {
     .enfase {
-      margin-top: 4ex; } }
+      margin-top: 6ex; } }
+
+[href="#contact"] {
+  color: #FFF; }
 
 .grid {
   display: -webkit-box;
@@ -246,27 +249,31 @@ svg.fill circle {
       padding-right: 4ex; } }
 
 .product h2 {
-    font-size: 3.332ex;
+    margin-top: 2.8ex;
+    margin-bottom: 0;
+    font-size: 2.38ex;
     font-family: "GTWalsheimBold", sans-serif;
     font-style: normal;
     font-weight: 600;
     line-height: 1.2;
-    min-height: 60px; }
+    min-height: 50px; }
 
 @media (min-width: 768px) {
       .product h2 {
-        font-size: 3.50464ex; } }
+        margin-top: 4ex; } }
+
+@media (min-width: 768px) {
+      .product h2 {
+        font-size: 2.368ex; } }
 
 .product P {
-    font-size: 2.38ex;
     font-family: "Athelas-Regular",sans-serif;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.5; }
-
-@media (min-width: 768px) {
-      .product P {
-        font-size: 2.368ex; } }
+    font-size: 15px;
+    color: #131E3E;
+    letter-spacing: 0;
+    line-height: 1.1em; }
 
 .social-icons span {
   margin-right: 2ex;
@@ -853,7 +860,8 @@ button.swiper-pagination-bullet {
     font-weight: 500; }
 
 #about {
-  padding-bottom: 6.3ex; }
+  padding-bottom: 6.3ex;
+  background: #F8FBFE; }
 
 @media (min-width: 768px) {
     #about {
@@ -900,7 +908,8 @@ button.swiper-pagination-bullet {
     font-family: "Athelas-Regular",sans-serif;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.4em; }
+    line-height: 1.5em;
+    color: #131E3E; }
 
 @media (min-width: 768px) {
       #about article p {
@@ -1121,7 +1130,7 @@ footer {
 
 #read-more .medium-wrp, #watch-more .videos-wrp {
   position: relative;
-  margin-top: 90px; }
+  margin-top: 50px; }
 
 #read-more .medium-wrp .container.bg, #watch-more .videos-wrp .container.bg {
     position: absolute;
@@ -1145,7 +1154,7 @@ footer {
 #read-more .medium-wrp {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1700px;
+    max-width: 1480px;
     padding-left: 2.8ex;
     padding-right: 2.8ex; }
 
@@ -1157,18 +1166,22 @@ footer {
 #read-more .section-header {
     text-align: left; }
 
+#read-more .swiper-container {
+    padding-bottom: 20px; }
+
 #read-more .medium-post {
     position: relative;
-    padding-top: 1.4ex;
+    max-height: 300px;
+    padding-top: 2.8ex;
     padding-bottom: 4.2ex;
-    padding-left: 1.4ex;
-    padding-right: 1.4ex;
+    padding-left: 2.8ex;
+    padding-right: 2.8ex;
     background: #FFF;
     border-radius: 5px; }
 
 @media (min-width: 768px) {
       #read-more .medium-post {
-        padding-top: 2ex; } }
+        padding-top: 4ex; } }
 
 @media (min-width: 768px) {
       #read-more .medium-post {
@@ -1176,31 +1189,36 @@ footer {
 
 @media (min-width: 768px) {
       #read-more .medium-post {
-        padding-left: 2ex;
-        padding-right: 2ex; } }
+        padding-left: 4ex;
+        padding-right: 4ex; } }
 
 #read-more .medium-post h1 {
       margin: 0 0 10px;
       font-size: 20px;
       color: #131E3E;
       letter-spacing: 0;
-      line-height: 1.2em;
+      font-size: 2.38ex;
       font-family: "GTWalsheimBold", sans-serif;
       font-style: normal;
-      font-weight: 600; }
+      font-weight: 600;
+      line-height: 1.2; }
+
+@media (min-width: 768px) {
+        #read-more .medium-post h1 {
+          font-size: 2.368ex; } }
 
 #read-more .medium-post p {
       font-family: "Athelas-Regular",sans-serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 15px;
       color: #131E3E;
       letter-spacing: 0;
       line-height: 1.1em; }
 
 #read-more .medium-post span {
       position: absolute;
-      bottom: 20px;
+      bottom: 25px;
       font-family: "GTWalsheimBold", sans-serif;
       font-style: normal;
       font-weight: 600;
@@ -1210,10 +1228,10 @@ footer {
       line-height: 10px; }
 
 #read-more .swiper-button-prev {
-    left: 15; }
+    left: 20px; }
 
 #read-more .swiper-button-next {
-    left: 65px; }
+    left: 75px; }
 
 .section-header {
   position: relative;
@@ -1309,7 +1327,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 6.3ex;
-    max-width: 1700px;
+    max-width: 1480px;
     padding-left: 2.8ex;
     padding-right: 2.8ex; }
 
@@ -1323,13 +1341,11 @@ footer {
         padding-right: 4ex; } }
 
 #watch-more .swiper-button-prev {
-    top: 20px;
-    right: 65px;
+    right: 75px;
     left: auto; }
 
 #watch-more .swiper-button-next {
-    top: 20px;
-    right: 15;
+    right: 20px;
     left: auto; }
 
 /*# sourceMappingURL=style.css.map*/

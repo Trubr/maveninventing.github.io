@@ -33,22 +33,19 @@
 		margin-left: auto;
 		margin-right: auto;
 		@include m-b-spacer-($spacer-2xl);
-		max-width: 1700px;
+		max-width: 1480px;
 		@include p-x-spacer-($spacer-lg);
-
 	}
 
 	@extend %navigation;
 
 	.swiper-button-prev {
-		top: 20px;
-		right:65px;
+		right:75px;
 		left: auto;
 	}
 
 	.swiper-button-next {
-		top: 20px;
-		right: 15;
+		right: 20px;
 		left: auto;
 	}
 }

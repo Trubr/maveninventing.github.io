@@ -38,7 +38,7 @@
 
 %containerBg{
 	position: relative;
-	margin-top: 90px;
+	margin-top: 50px;
 
 	.container.bg{
 		position: absolute;
@@ -58,7 +58,7 @@
 		@extend %containerBg;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 1700px;
+		max-width: 1480px;
 		@include p-x-spacer-($spacer-lg);
 	}
 
@@ -66,13 +66,18 @@
 		text-align: left;
 		@extend %h1Center;
 	}
+
+	.swiper-container{
+		padding-bottom: 20px;
+	}
 	
 
 	.medium-post{
 		position: relative;
-		@include p-t-spacer-($spacer-md);
+		max-height: 300px;
+		@include p-t-spacer-($spacer-lg);
 		@include p-b-spacer-($spacer-xl);
-		@include p-x-spacer-($spacer-md);
+		@include p-x-spacer-($spacer-lg);
 		background: $white;
 		border-radius: 5px;
 
@@ -81,13 +86,13 @@
 			font-size: 20px;
 			color: #131E3E;
 			letter-spacing: 0;
-			line-height: 1.2em;
-			@include font--primary-bold;
+			@include heading-small;
+
 		}
 
 		p{
 			@include font--secondary-regular;
-			font-size: 14px;
+			font-size: 15px;
 			color: #131E3E;
 			letter-spacing: 0;
 			line-height: 1.1em;
@@ -95,7 +100,7 @@
 
 		span{
 			position: absolute;
-			bottom: 20px;
+			bottom: 25px;
 			@include font--primary-bold;
 			font-size: 10px;
 			color: #3E578A;
@@ -108,10 +113,10 @@
 	@extend %navigation;
 
 	.swiper-button-prev{
-		left: 15;
+		left: 20px;
 	}
 	.swiper-button-next {
-		left: 65px;
+		left: 75px;
 	}
 
 }

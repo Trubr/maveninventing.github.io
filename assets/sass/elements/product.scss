@@ -8,12 +8,18 @@
 	border-radius: 4px;
 
 	h2{
-		@include heading-medium;
-		min-height: 60px;
+		@include m-t-spacer-($spacer-lg);
+		margin-bottom: 0;
+		@include heading-small;
+		min-height: 50px;
 	}
 
 	P{
-		@include body;
+		@include font--secondary-regular;
+		font-size: 15px;
+		color: #131E3E;
+		letter-spacing: 0;
+		line-height: 1.1em;
 	}
 
 }
