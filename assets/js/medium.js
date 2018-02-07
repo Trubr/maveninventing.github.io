@@ -70,6 +70,11 @@ export default () => {
 				slidesPerGroup: 1,
 				spaceBetween: 0,
 			},
+			769: {
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 30
+			},
 			1240: {
 				slidesPerView: 3,
 				slidesPerGroup: 3,
