@@ -11,4 +11,4 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
 
 }
 
-export { elementIsVisibleInViewport }
+export default elementIsVisibleInViewport

@@ -6,8 +6,8 @@ import handlePolyfills from './handlePolyfills'
 import lazyLoad from './lazyLoad'
 
 export { 
-	elementIsVisibleInViewport,
 	ScrollHandler,
+	elementIsVisibleInViewport,
 	isMobile,
 	getElemOffset,
 	handlePolyfills,
