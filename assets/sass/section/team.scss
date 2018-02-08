@@ -7,4 +7,16 @@
 		background-image: url(../assets/img/banner-about.jpg);
 	}
 
+
+	@include responsive(540px, 'max') {
+		.grid{
+			flex-wrap: wrap;
+		}
+
+		.team-member{
+			@include m-b-spacer-($spacer-lg);
+			width: 100%;
+		}
+	}
+
 }

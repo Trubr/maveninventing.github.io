@@ -43,4 +43,47 @@
         @include size--base-3;
 	}
 
+
+	@include responsive(769px, 'max') {
+
+		figcaption{
+			top: 20px;
+		}
+
+		img{
+			width: 55%;
+			height: auto;
+		}
+
+		&:before {
+			top: 20px;
+			width: 65%;
+			height: 100%;
+		}
+
+	}
+
+	@include responsive(540px, 'max') {
+		
+		&.grid{
+			display: block;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+		figcaption {
+			top: 0;
+		}
+
+		&:before {
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+
 }

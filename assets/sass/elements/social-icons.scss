@@ -4,6 +4,11 @@
 		margin-right: $spacer-md;
 		display: block;
 		color: $white;
+
+		@include responsive(540px, 'max') {
+			display: none;
+		}
+
 	}
 
 	a{
