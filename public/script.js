@@ -6714,7 +6714,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 	// smooth animations on menu anchors
 	(0, _menu2.default)();
 
-	(0, _parallax2.default)();
+	//parallax()
 });
 
 /***/ }),

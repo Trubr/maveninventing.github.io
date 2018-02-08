@@ -17,6 +17,6 @@ domready( _ => {
 	// smooth animations on menu anchors
 	menu()
 
-	parallax()
+	//parallax()
 	
 })
