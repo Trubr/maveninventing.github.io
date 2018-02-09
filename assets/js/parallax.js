@@ -10,25 +10,40 @@ import {
 	elementIsVisibleInViewport
 } from './utils/utils'
 
-export default () => {
-	const bgs = all('.section-header')
+export default (selector, time = 2) => {
 
-	forEach(bgs, bg =>{
+	let elements = []
+
+	if (selector instanceof Element){
+		elements.push(selector)
+	}else{
+		elements = all(selector)
+	}
 
 
-		const { top } = getElemOffset(bg)
+	forEach(elements, element => {
+
+		let scrolling = false
 
 		const scroll = new ScrollHandler()
+		const { top } = getElemOffset(element)
+		const compensate = top / time
 
 		scroll.init({
 
 			after: _ => {
 
-				const visible = elementIsVisibleInViewport(bg, true)
+				const visible = elementIsVisibleInViewport(element, true)
 
 				if (visible) {
-					const y = (scroll.lastPosY - top) / 7
-					bg.style.backgroundPosition = `center ${y}px`
+					const y = (scroll.lastPosY - compensate)
+					element.style.transform = `translate3d(0, -${y}px, 0)`
+				}
+
+				
+				if (!scrolling) {
+					element.classList.add('scrolling')
+					scrolling = true
 				}
 
 			}

@@ -67,3 +67,44 @@ svg.fill{
 
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showIntro {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 40%, 0);
+  }
+  35% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+@keyframes showIntroFromUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100px, 0);
+  }
+  35% {
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

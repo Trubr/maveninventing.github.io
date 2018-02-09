@@ -49,9 +49,7 @@ const styles = {
 const browserSync = new BrowserSyncPlugin({
     host: 'localhost',
     files: ["**/*.html", "./public/**/*.js"],
-    server: {
-        baseDir: ['./']
-    }
+    server: {baseDir: ['./']}
 }, { reload: false })
 
 // this just inject the css on the page and prevent webpack from reload all the browser

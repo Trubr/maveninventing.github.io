@@ -18,6 +18,7 @@
         margin: 0;
         @include m-b-spacer-($spacer-2xs);
         color: $white;
+        animation: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
         @include responsive(980px, 'min') {
             @include heading-xxlarge;
@@ -31,12 +32,19 @@
             font-size: 14vw
         }
 
-        
     }
     
     h2{
         @include m-y-spacer-($spacer-none);
         color: $c7;
+
+        &:not(.scrolling){
+            animation: showIntro 0.5s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        &.scrolling{
+            opacity: 1;
+        }
 
         @include responsive(768px, 'min') {
             @include heading-large;
@@ -48,11 +56,23 @@
 
 
     }
+    
+
+    h1, h2{
+        opacity: 0;
+
+        .letter {
+            opacity: 0;
+        }
+
+    }
+    
 
     .social-and-more{
         @include heading-xsmall;
         @include p-y-spacer-($spacer-md);
         @include p-x-spacer-($spacer-lg);
+        animation: showIntro 0.5s linear forwards;
     }
 
 }

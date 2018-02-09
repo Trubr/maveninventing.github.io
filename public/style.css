@@ -63,6 +63,76 @@ svg.fill circle {
   stroke-width: inherit;
   stroke: inherit; }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0; }
+  35% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  35% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes showIntro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40%, 0);
+            transform: translate3d(0, 40%, 0); }
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+            transform: translate3d(0, 20%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes showIntro {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40%, 0);
+            transform: translate3d(0, 40%, 0); }
+  35% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+            transform: translate3d(0, 20%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes showIntroFromUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0); }
+  35% {
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes showIntroFromUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100px, 0);
+            transform: translate3d(0, -100px, 0); }
+  35% {
+    -webkit-transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
 .about-illustration {
   position: relative;
   margin-top: 4.2ex;
@@ -289,7 +359,9 @@ header.menu-active, main.menu-active {
   padding-bottom: 2.8ex;
   padding-left: 2.8ex;
   padding-right: 2.8ex;
-  z-index: 9; }
+  z-index: 9;
+  -webkit-animation: showIntroFromUp 0.5s linear forwards;
+          animation: showIntroFromUp 0.5s linear forwards; }
 
 @media (min-width: 768px) {
     #nav {
@@ -1243,7 +1315,9 @@ footer {
 #intro h1 {
     margin: 0;
     margin-bottom: 0.504ex;
-    color: #FFF; }
+    color: #FFF;
+    -webkit-animation: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: opacity 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
 
 @media (min-width: 768px) {
       #intro h1 {
@@ -1287,6 +1361,13 @@ footer {
         margin-top: 0;
         margin-bottom: 0; } }
 
+#intro h2:not(.scrolling) {
+      -webkit-animation: showIntro 0.5s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+              animation: showIntro 0.5s 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+
+#intro h2.scrolling {
+      opacity: 1; }
+
 @media (min-width: 768px) {
       #intro h2 {
         font-size: 4.6648ex;
@@ -1311,6 +1392,12 @@ footer {
     #intro h2 {
       font-size: 3.50464ex; } }
 
+#intro h1, #intro h2 {
+    opacity: 0; }
+
+#intro h1 .letter, #intro h2 .letter {
+      opacity: 0; }
+
 #intro .social-and-more {
     font-size: 2.38ex;
     font-family: "GTWalsheimBold", sans-serif;
@@ -1320,7 +1407,9 @@ footer {
     padding-top: 1.4ex;
     padding-bottom: 1.4ex;
     padding-left: 2.8ex;
-    padding-right: 2.8ex; }
+    padding-right: 2.8ex;
+    -webkit-animation: showIntro 0.5s linear forwards;
+            animation: showIntro 0.5s linear forwards; }
 
 @media (min-width: 768px) {
       #intro .social-and-more {
