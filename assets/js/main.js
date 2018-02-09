@@ -20,7 +20,7 @@ domready( _ => {
 	menu()
 
 	lettering()
-
+	
 	//parallax('.about-illustration img', 1.1)
 	//bgParralax('.section-header')
 	

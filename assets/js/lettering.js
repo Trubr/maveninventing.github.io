@@ -6,7 +6,6 @@ import {
 
 import anime from 'animejs'
 
-
 const wrapSpan = txt => {
 	txt.innerHTML = txt.innerText.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>")
 }
@@ -31,7 +30,7 @@ const letteringEffect = element =>{
 
 
 export default selector =>{
-	
+
 	const introTitle = the('#intro h1')	
 	letteringEffect(introTitle)
 
