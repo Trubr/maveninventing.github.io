@@ -7,5 +7,6 @@
 	@include p-y-spacer-($spacer-lg);
 	@include p-x-spacer-($spacer-lg);
 	z-index: 9;
-	animation: showIntroFromUp 0.5s linear forwards;
+	opacity: 0;
+	animation: showIntroFromUp 0.5s 0.8s linear forwards;
 }

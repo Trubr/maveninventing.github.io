@@ -27,7 +27,6 @@
 		@include m-y-spacer-($spacer-md);
 		@include heading-xlarge;
 
-
 		@include responsive(768px, 'max') {
 			font-size: 14vw;
 			text-align: center;
