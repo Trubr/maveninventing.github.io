@@ -11,4 +11,16 @@
 		@include m-t-spacer-($spacer-2xl);	
 	}
 
+	@include responsive(540px, 'max') {
+		.grid {
+			flex-wrap: wrap;
+		}
+		.product {
+			@include m-b-spacer-($spacer-lg);
+			width: 100%;
+		}
+	}
+
+
+
 }

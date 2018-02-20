@@ -1,0 +1,76 @@
+#hamburger{
+	position: relative;
+	height: 40px;
+	width: 40px;
+	padding: 0;
+	background: transparent;
+	border: none;
+
+	i,
+	i:after,
+	i:before{
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		display: block;
+		background: $white;
+		will-change: transform;
+		backface-visibility: hidden;
+		transition: 0.4s transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	i:after,
+	i:before{
+		content: '';
+	}
+
+	i:after{
+		top: 9px;
+	}
+
+	i:before {
+		top: -9px;
+	}
+
+	@include responsive(980px, 'min') {
+		display: none;
+	}
+
+	&.menu-active {
+		i{
+			background: transparent;
+		}
+
+		i:after,
+		i:before {
+			top: 0;
+			transform-origin: 50%;
+		}
+
+		i:after {
+  			transform: rotate3d(0, 0, 1, 45deg);
+		}
+
+		i:before {
+			transform: rotate3d(0, 0, 1, -45deg);
+		}
+
+	}
+
+}
+
+
+header,
+main {
+	&.menu-active {
+		animation: blurred 0.4s forwards;
+	}
+}
+
+
+@keyframes blurred {
+	0% {}
+	100% {
+		filter: url(#wherearemyglasses);
+	}
+}

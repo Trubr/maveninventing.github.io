@@ -17,20 +17,63 @@
     h1{
         margin: 0;
         @include m-b-spacer-($spacer-2xs);
-        @include heading-xxlarge;
         color: $white;
+        animation: opacity 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
+        @include responsive(980px, 'min') {
+            @include heading-xxlarge;
+        }
+        
+        @include responsive(980px, 'max') {
+            @include heading-xlarge;
+        }
+
+        @include responsive(768px, 'max') {
+            font-size: 14vw
+        }
+
     }
     
     h2{
         @include m-y-spacer-($spacer-none);
-        @include heading-large;
         color: $c7;
+
+        &:not(.scrolling){
+            animation: showIntro 0.5s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        &.scrolling{
+            opacity: 1;
+        }
+
+        @include responsive(768px, 'min') {
+            @include heading-large;
+        }
+
+        @include responsive(768px, 'max') {
+            @include heading-medium
+        }
+
+
     }
+    
+
+    h1, h2{
+        opacity: 0;
+
+        .letter {
+            opacity: 0;
+        }
+
+    }
+    
 
     .social-and-more{
         @include heading-xsmall;
         @include p-y-spacer-($spacer-md);
         @include p-x-spacer-($spacer-lg);
+        opacity: 0;
+        animation: showIntro 0.5s 0.8s linear forwards;
     }
 
 }
