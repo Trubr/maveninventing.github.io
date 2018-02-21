@@ -6,8 +6,11 @@ import {
 
 import anime from 'animejs'
 
-const wrapSpan = txt => {
-	txt.innerHTML = txt.innerText.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>")
+const letteringEffect = txts => {
+	forEach(txts, txt => {
+		txt.innerHTML = txt.innerText.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>")
+		animation(txt.querySelectorAll('.letter'))	
+	})
 }
 
 const animation = array => {
@@ -16,25 +19,20 @@ const animation = array => {
 		.add({
 			targets: array,
 			opacity: 1,
-			easing: 'linear',
-			duration: 400,
-			delay: (el, i) => 35 * i
+			translateY: {
+				value: [30, 0],
+				duration: 720 
+			},
+			easing: [.19, 1, .22, 1],
+			duration: 720,
+			delay: (el, i) => 50 * i
 		})
 
 }
 
-const letteringEffect = element =>{
-	wrapSpan(element)
-	animation(element.querySelectorAll('.letter'))	
-}
-
-
 export default selector =>{
 
-	const introTitle = the('#intro h1')	
+	const introTitle = all('#intro h1 div')	
 	letteringEffect(introTitle)
-
-	// const introSubTitle = the('#intro h2')
-	// letteringEffect(introSubTitle)
 
 }	

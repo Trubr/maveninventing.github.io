@@ -5,8 +5,6 @@
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-
-	background-position: center;
 	background-size:cover;
 	background-repeat: no-repeat;
 	max-height: 320px;
@@ -14,7 +12,6 @@
 	&:not(.white){
 		background-color: $c3;
 	}
-
 
 	.header-bg{
 		z-index: 1;
@@ -24,6 +21,11 @@
 		margin: 0;
 		z-index: 2;
 		max-width: 640px;
+		opacity: var(--o);
+		transform: translate3d(0, var(--tx), 0);
+		will-change: transform;
+		transition: opacity 0.3s $transition;
+
 		@include m-y-spacer-($spacer-md);
 		@include heading-xlarge;
 
@@ -31,7 +33,6 @@
 			font-size: 14vw;
 			text-align: center;
 		}
-
 	}
 	
 }

@@ -8,5 +8,5 @@
 	@include p-x-spacer-($spacer-lg);
 	z-index: 9;
 	opacity: 0;
-	animation: showIntroFromUp 0.5s 0.8s linear forwards;
+	animation: showIntroFromUp 0.5s 1s cubic-bezier(.165, .84, .44, 1) forwards;
 }

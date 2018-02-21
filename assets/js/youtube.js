@@ -50,6 +50,9 @@ export default () => {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		preloadImages: false,
+		lazy: true,
+		watchSlidesVisibility: true, 
 		breakpoints: {
 			480: {
 				slidesPerView: 1,
@@ -76,15 +79,21 @@ export default () => {
 
 	swiper.on('init', () => carrousel.classList.add('active'))
 
+	const svg = (h, w) => `data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 ${w} ${h}'%2F%3E`
 
 	const videoElement = (link, image, video) => {
+
+		const h = image.high.height
+		const w = image.high.width
+
 		return `<div class="video-youtube swiper-slide">
 			<a href="https://www.youtube.com/watch?v=${link}" target="_blank" rel="noopener">
 				<figure>
-					<img src="${image.high.url}" alt="${video.snippet.title}" height="${image.high.height}" width="${image.high.width}" />
+					<img data-src="${image.high.url}" src="${svg(h, w)}" alt="${video.snippet.title}" height="${h}" width="${w}" class="swiper-lazy" />
 				</figure>
 			</a>
 		 </div>`
+
 	}
 
 
@@ -99,7 +108,7 @@ export default () => {
 
 		swiper.appendSlide(thumbs)
 		
-		setTimeout( _ => swiper.init(), 500)
+		swiper.init()
 
 	})
 

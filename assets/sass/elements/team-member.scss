@@ -1,4 +1,5 @@
 .team-member{
+	overflow: hidden;
 	@include m-x-spacer-($spacer-sm);
 	width: 33%;
 

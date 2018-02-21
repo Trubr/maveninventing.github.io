@@ -1,0 +1,6 @@
+[data-src]{
+    &:not(.unblur){
+        filter: blur(3px);
+        transition: filter 0.3s $transition;
+    }
+}

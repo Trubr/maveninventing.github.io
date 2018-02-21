@@ -2,7 +2,6 @@
 	@include p-b-spacer-($spacer-2xl);
 	background: $c9;
 
-
 	.highlight{
 		@include m-x-spacer-($spacer-md);
 		color: $c7;
@@ -13,6 +12,7 @@
 
 	header{
 		@extend %whiteTitle;
+		//background-image: url(../assets/img/banner-team.jpg);
 		background-image: url(../assets/img/banner-about.jpg);
 	}
 

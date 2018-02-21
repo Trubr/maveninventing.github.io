@@ -53,7 +53,8 @@ const getPosts = () => {
 
 export default () => {
 
-	const carrousel = the('#read-more .swiper-container')
+	const readMore = the('#read-more')
+	const carrousel = readMore.querySelector('.swiper-container')
 
 	const swiper = new Swiper(carrousel, {
 		init: false,
@@ -88,7 +89,7 @@ export default () => {
 		}
 	})
 
-	swiper.on('init', () => carrousel.classList.add('active'))
+	swiper.on('init', () => readMore.classList.add('active'))
 
 
 	const mediumPost = post => {
@@ -114,7 +115,8 @@ export default () => {
 		posts.forEach(post => thumbs.push(mediumPost(post)))
 
 		swiper.appendSlide(thumbs)
-		setTimeout(_ => swiper.init(), 500)
+		
+		swiper.init()
 
 	}
 

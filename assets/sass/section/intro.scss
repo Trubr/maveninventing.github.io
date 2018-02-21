@@ -13,12 +13,11 @@
         }
 
     }
-
     h1{
         margin: 0;
         @include m-b-spacer-($spacer-2xs);
         color: $white;
-        animation: opacity 0.5s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        animation: opacity 0.5s 0.2s cubic-bezier(.165, .84, .44, 1) forwards;
 
         @include responsive(980px, 'min') {
             @include heading-xxlarge;
@@ -39,7 +38,7 @@
         color: $c7;
 
         &:not(.scrolling){
-            animation: showIntro 0.5s 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation: showIntro 0.6s .6s cubic-bezier(.19, 1, .22, 1) forwards;
         }
 
         &.scrolling{
@@ -62,6 +61,8 @@
         opacity: 0;
 
         .letter {
+            display: inline-block;
+            transform: translateY(100px);
             opacity: 0;
         }
 
@@ -73,7 +74,7 @@
         @include p-y-spacer-($spacer-md);
         @include p-x-spacer-($spacer-lg);
         opacity: 0;
-        animation: showIntro 0.5s 0.8s linear forwards;
+        animation: showIntro 0.8s 1s $transition forwards;
     }
 
 }

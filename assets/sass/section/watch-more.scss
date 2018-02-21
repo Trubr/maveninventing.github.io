@@ -32,6 +32,7 @@
 		@extend %containerBg;
 		margin-left: auto;
 		margin-right: auto;
+		min-height: 350px;
 		@include m-b-spacer-($spacer-2xl);
 		max-width: 1480px;
 		@include p-x-spacer-($spacer-lg);

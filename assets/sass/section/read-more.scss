@@ -45,7 +45,7 @@
 		left: 50%;
 		margin-top: -20px;
 		transform: translateX(-50%);
-		height: calc(100% + 60px);
+		height: 415px;
 		background: #25386D;
 	}
 }
@@ -54,11 +54,24 @@
 	@include p-y-spacer-($spacer-2xl);
 	background: #F8FBFE;
 
+	.swiper-container {
+		opacity: 1;
+		transition: opacity 0.4s $transition;
+	}
+
+	&:not(.active) {
+		.swiper-container {
+			opacity: 0;
+		}
+	}
+
+
 	.medium-wrp{
 		@extend %containerBg;
 		margin-left: auto;
 		margin-right: auto;
 		max-width: 1480px;
+		min-height: 350px;
 		@include p-x-spacer-($spacer-lg);
 	}
 
@@ -71,17 +84,44 @@
 		padding-bottom: 20px;
 	}
 	
-
 	.medium-post{
 		position: relative;
-		max-height: 300px;
+		max-height: 280px;
 		@include p-t-spacer-($spacer-lg);
 		@include p-b-spacer-($spacer-xl);
 		@include p-x-spacer-($spacer-lg);
-		background: $white;
-		border-radius: 5px;
+		overflow: hidden;
+
+		&:after,
+		&:before{
+			position: absolute;
+			content: '';
+			border-radius: 5px;
+		}
+	
+		&:after{
+			left: 5px;
+			top: 5px;
+			height: calc(100% - 10px);
+			width : calc(100% - 10px);
+			background: $white;
+		}
+
+		&:before {
+			left: 5px;
+			top: 5px;
+			height: calc(100% - 10px);
+			width: calc(100% - 10px);
+			box-shadow: 0 2px 4px rgba(13, 17, 31, 0.2);
+		}
+
+		h1, p{
+			position: relative;
+			z-index: 1;
+		}
 
 		h1{
+
 			margin: 0 0 10px;
 			font-size: 20px;
 			color: #131E3E;
@@ -100,6 +140,7 @@
 
 		span{
 			position: absolute;
+			z-index: 1;
 			bottom: 25px;
 			@include font--primary-bold;
 			font-size: 10px;
