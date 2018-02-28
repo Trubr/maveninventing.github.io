@@ -1,14 +1,14 @@
-$desk-ms: 1.464; // Desktop Multiplier Scale
+$desk-ms: 1.51; // Desktop Multiplier Scale
 $mobile-ms: 1.4;    // Mobile Multiplier Scale
 
-$d-b0: 1.58ex;         // Fine Print + XS Heading
+$d-b0: 1.6ex;         // Fine Print + XS Heading
 $d-b1: $d-b0*$desk-ms; // Body + Small Heading
 $d-b2: $d-b1*$desk-ms; // Large Body + Heading
 $d-b3: $d-b2*$desk-ms; // Large Heading
 $d-b4: $d-b3*$desk-ms; // XL Heading
 $d-b5: $d-b4*$desk-ms; // XXL Heading
 $d-b6: $d-b5*$desk-ms; // XXXL Heading
-$d-b7: $d-b6* ($desk-ms - 0.32); // XXXL Heading
+$d-b7: $d-b6* ($desk-ms - 0.40); // XXXL Heading
 
 $m-b0: 1.7ex;           // Fine Print + XS Heading
 $m-b1: $m-b0*$mobile-ms; // Body + Small Heading

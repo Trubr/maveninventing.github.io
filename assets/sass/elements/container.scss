@@ -2,4 +2,8 @@
 	margin: 0 auto;
 	width: calc(100% - 40px);
 	max-width: 1024px;
+
+	&.in{
+		max-width: 1120px;
+	}
 }

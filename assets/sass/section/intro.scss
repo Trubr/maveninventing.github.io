@@ -19,16 +19,18 @@
         color: $white;
         animation: opacity 0.5s 0.2s cubic-bezier(.165, .84, .44, 1) forwards;
 
-        @include responsive(980px, 'min') {
+        @include responsive(1024px, 'min') {
             @include heading-xxlarge;
         }
         
-        @include responsive(980px, 'max') {
-            @include heading-xlarge;
+        @include responsive(1023px, 'max') {
+            @include font--primary-bold;
+            line-height: 0.9em;
+            font-size: 14.5vw
         }
 
         @include responsive(768px, 'max') {
-            font-size: 13.5vw
+            font-size: 12.5vw
         }
 
     }
@@ -50,7 +52,9 @@
         }
 
         @include responsive(768px, 'max') {
-            @include heading-medium
+            @include font--primary-bold;
+             line-height: .8em;
+             font-size: 6.5vw
         }
 
 
