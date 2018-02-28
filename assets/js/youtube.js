@@ -8,8 +8,6 @@ export default () => {
 
 	const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${id}&part=snippet,id&order=date&maxResults=5`
 
-	// const apiUrl = `https://www.googleapis.com/youtube/v3/videos?id=${id}&key=${key}&part=contentDetails`
-
 	const fetcher = () =>{
 
 		return new Promise((resolve, reject) => {
@@ -111,10 +109,6 @@ export default () => {
 		swiper.init()
 
 	})
-
-
-
-
 
 
 }

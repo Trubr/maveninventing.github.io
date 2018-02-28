@@ -16,5 +16,5 @@ import loadBlog from './loadBlog'
 	
 	// service worker code here
 	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('./public/service-worker.js')
+		navigator.serviceWorker.register('./service-worker.js')
 	}
