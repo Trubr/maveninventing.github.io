@@ -1,4 +1,4 @@
-import { the, all, forEach} from './utils/helpers'
+import { all, forEach} from './utils/helpers'
 
 // preload images
 export default _ => {

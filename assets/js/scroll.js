@@ -1,15 +1,15 @@
-import { the, all, forEach} from './utils/helpers'
+import { all, forEach} from './utils/helpers'
 
 import * as basicScroll from 'basicscroll'
 
-export default () =>{
+export default _ =>{
 
     const titles = all('.section-header h1')
 
     forEach(titles, title =>{
 
         const scrollBasic = basicScroll.create({
-
+            
             elem: title,
             from: 'top-bottom',
             to: 'top-top',
@@ -30,8 +30,5 @@ export default () =>{
         scrollBasic.start()
 
     })
-
-
-
 
 }

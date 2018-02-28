@@ -1,5 +1,4 @@
 import {
-	the,
 	all,
 	forEach
 } from './utils/helpers'

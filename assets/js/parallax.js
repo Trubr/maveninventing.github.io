@@ -20,7 +20,6 @@ export default (selector, time = 2) => {
 		elements = all(selector)
 	}
 
-
 	forEach(elements, element => {
 
 		let scrolling = false

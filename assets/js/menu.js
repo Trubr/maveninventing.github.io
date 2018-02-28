@@ -1,6 +1,5 @@
 import { all, forEach, the} from './utils/helpers'
-import scrollIt from './utils/scrollIt'
-
+import scroll from 'scroll-to-element'
 
 export default () => {
 
@@ -14,7 +13,6 @@ export default () => {
 		nav: the('#navigation') || false,
 		open: 0
 	}
-
 
 	function toogleMenu(){
 		if (!controls.open) {
@@ -55,7 +53,13 @@ export default () => {
 			const selector = e.target.getAttribute('href')
 			const target = targets.find(target => target.anchor == selector)
 
-			scrollIt(target.target, 400, 'easeInOutQuart')
+			console.log(target)
+
+			scroll(target.target,{
+				offset: 0,
+				ease: 'inOutQuint',
+				duration: 720
+			})
 
 			controls.open && toogleMenu()
 

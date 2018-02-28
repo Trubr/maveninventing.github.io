@@ -1,6 +1,6 @@
 
-const dataCacheName = 'trubr'
-const cacheName = 'trubr-1'
+const dataCacheName = 'trubr2'
+const cacheName = 'trubr-2'
 
 const filesToCache = [
   '/',
@@ -13,10 +13,11 @@ const filesToCache = [
   '../assets/img/marison.png',
   '../assets/img/edelweis.png',
   '../assets/img/tech.jpg',
-
+  '../assets/img/banner-team.jpg',
+  '../assets/img/banner-team.jpg',
+  '../assets/img/banner-services.jpg',
+  '../assets/img/banner-about.jpg'
 ]
-
-console.log('web')
 
 const cacher = () => {
   caches.open(cacheName).then(cache => {
