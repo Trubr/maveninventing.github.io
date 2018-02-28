@@ -5,6 +5,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const globImporter = require('node-sass-glob-importer')
 const { Gaze } = require('gaze')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 // JS
 const scripts = {
@@ -59,19 +60,22 @@ gaze.on('all', () => browserSync.browserSync.reload("./public/*.css"))
 // webpack configuration
 module.exports = {
     entry: {
-        script: path.resolve(__dirname, 'assets/js/main.js'),
+        main: path.resolve(__dirname, 'assets/js/main.js'),
         style: path.resolve(__dirname, 'assets/sass/style.scss')
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'public')
+        path: path.resolve(__dirname, 'public'),
+        publicPath: 'public/',
+        chunkFilename: '[name].js'
     },
     module: {
         loaders: [styles, scripts]
     },
     plugins: [
         extractSass,
-        browserSync
+        browserSync,
+        new BundleAnalyzerPlugin()
     ],
     watch: true,
     devtool: "source-map"

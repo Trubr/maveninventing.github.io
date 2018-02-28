@@ -1,5 +1,5 @@
 import { the } from './utils/helpers'
-import scrollIt from './utils/scrollIt'
+import scroll from 'scroll-to-element'
 
 const getNextNode = parent =>{
 
@@ -18,8 +18,16 @@ export default () => {
 	
 	const scrollDown = the('.learn-more')
 	const target = getNextNode(scrollDown.parentNode.parentNode)
+	
 
-	scrollDown.addEventListener('click', () => scrollIt(target, 400, 'easeInOutQuart'), true)
+	scrollDown.addEventListener('click', () => {
+		scroll(target, {
+		
+			offset: 0,
+			ease: 'inOutQuint',
+			duration: 720
+		})
+	}, true)
 
 }
 

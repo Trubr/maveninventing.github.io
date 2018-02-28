@@ -21,8 +21,7 @@
 		margin: 0;
 		z-index: 2;
 		max-width: 640px;
-		opacity: var(--o);
-		transform: translate3d(0, var(--tx), 0);
+
 		will-change: transform;
 		transition: opacity 0.3s $transition;
 

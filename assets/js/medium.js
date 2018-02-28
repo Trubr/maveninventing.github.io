@@ -94,7 +94,7 @@ export default () => {
 
 	const mediumPost = post => {
 
-		const excerpt = post['content:encoded'].substring(0, 290) + ' […]'
+		const excerpt = post['content:encoded'].substring(0, 260) + ' […]'
 		const cleanExcerpt = excerpt.replace(/<\/?[^>]+(>|$)/g, "")
 
 		return `<article class="medium-post swiper-slide">
