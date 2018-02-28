@@ -1,6 +1,6 @@
 
-const dataCacheName = 'trubr2'
-const cacheName = 'trubr-2'
+const dataCacheName = 'trubr3'
+const cacheName = 'trubr-3'
 
 const filesToCache = [
   '/',
