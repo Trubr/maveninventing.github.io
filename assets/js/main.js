@@ -4,6 +4,11 @@ import lettering from './lettering'
 import lazyLoad from './lazyLoad'
 import loadBlog from './loadBlog'
 
+	// service worker code here
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('../sw.js')
+	}
+
 	menu()
 	
 	lettering()
@@ -14,7 +19,3 @@ import loadBlog from './loadBlog'
 
 	loadBlog()
 	
-	// service worker code here
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('./service-worker.js')
-	}

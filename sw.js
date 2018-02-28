@@ -22,6 +22,13 @@ const staticAssets = [
 self.addEventListener('install', async function() {
 	const cache = await caches.open(cacheName)
 	cache.addAll(staticAssets)
+
+	caches.open('v1').then(function(cache) {
+		cache.delete('/images/image.png').then(function(response) {
+			someUIUpdateFunction()
+		})
+	})
+
 })
 
 self.addEventListener('activate', event => {
@@ -29,13 +36,13 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
-  
 	const request = event.request
   const url = new URL(request.url)
   
 	if (url.origin === location.origin) {
 		event.respondWith(cacheFirst(request))
 	} else {
+    console.log(request)
 		event.respondWith(networkFirst(request))
 	}
 })
@@ -47,7 +54,7 @@ async function cacheFirst(request) {
 
 async function networkFirst(request) {
   
-  const dynamicCache = await caches.open('news-dynamic')
+  const dynamicCache = await caches.open('dynamic')
   
 	try {
 
