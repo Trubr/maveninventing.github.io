@@ -61,7 +61,7 @@ gaze.on('all', () => browserSync.browserSync.reload("./public/*.css"))
 module.exports = {
     entry: {
         main: path.resolve(__dirname, 'assets/js/main.js'),
-        style: path.resolve(__dirname, 'assets/sass/style.scss')
+        styles: path.resolve(__dirname, 'assets/sass/style.scss')
     },
     output: {
         filename: '[name].js',

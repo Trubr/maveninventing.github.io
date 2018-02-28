@@ -5,7 +5,7 @@ const cacheName = 'trubr-2'
 const filesToCache = [
   '/',
   '../index.html',
-  './style.css',
+  './styles.css',
   './main.js',
   './blog.js',
   '../assets/fonts/GT-Walsheim-Bold.woff2',
