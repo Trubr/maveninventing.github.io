@@ -22,13 +22,6 @@ const staticAssets = [
 self.addEventListener('install', async function() {
 	const cache = await caches.open(cacheName)
 	cache.addAll(staticAssets)
-
-	caches.open('v1').then(function(cache) {
-		cache.delete('/images/image.png').then(function(response) {
-			someUIUpdateFunction()
-		})
-	})
-
 })
 
 self.addEventListener('activate', event => {
