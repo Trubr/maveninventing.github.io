@@ -1,6 +1,6 @@
 
-const dataCacheName = 'trubr4'
-const cacheName = 'trubr-4'
+const dataCacheName = 'trubr5'
+const cacheName = 'trubr-5'
 
 const staticAssets = [
   "/",
