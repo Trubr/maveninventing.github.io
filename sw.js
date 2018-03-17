@@ -1,25 +1,27 @@
 
-const dataCacheName = 'trubr3'
-const cacheName = 'trubr-3'
+const dataCacheName = 'trubr4'
+const cacheName = 'trubr-4'
 
 const staticAssets = [
-	'/',
-	'./public/styles.css',
-	'./public/main.js',
-	'./public/blog.js',
-	'./assets/fonts/GT-Walsheim-Bold.woff2',
-	'./assets/fonts/GT-Walsheim-Light.woff2',
-	'./assets/img/aline.png',
-	'./assets/img/marison.png',
-	'./assets/img/edelweis.png',
-	'./assets/img/tech.jpg',
-	'./assets/img/banner-team.jpg',
-	'./assets/img/banner-team.jpg',
-	'./assets/img/banner-services.jpg',
-	'./assets/img/banner-about.jpg'
-]
+  "/",
+  "./public/styles.css",
+  "./public/main.js",
+  "./public/blog.js",
+  "./assets/fonts/GT-Walsheim-Bold.woff2",
+  "./assets/fonts/GT-Walsheim-Light.woff2",
+  "./assets/fonts/GT-Walsheim-Bold.ttf",
+  "./assets/fonts/GT-Walsheim-Light.ttf",
+  "./assets/img/aline.png",
+  "./assets/img/marison.png",
+  "./assets/img/edelweis.png",
+  "./assets/img/tech.jpg",
+  "./assets/img/banner-team.jpg",
+  "./assets/img/banner-team.jpg",
+  "./assets/img/banner-services.jpg",
+  "./assets/img/banner-about.jpg"
+];
 
-self.addEventListener('install', async function() {
+self.addEventListener('install', async () => {
 	const cache = await caches.open(cacheName)
 	cache.addAll(staticAssets)
 })
@@ -29,14 +31,16 @@ self.addEventListener('activate', event => {
 })
 
 self.addEventListener('fetch', event => {
+
 	const request = event.request
-  const url = new URL(request.url)
+	const url = new URL(request.url)
   
 	if (url.origin === location.origin) {
 		event.respondWith(cacheFirst(request))
 	} else {
 		event.respondWith(networkFirst(request))
 	}
+
 })
 
 async function cacheFirst(request) {
