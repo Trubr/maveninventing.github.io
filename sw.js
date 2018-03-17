@@ -1,6 +1,6 @@
 
-const dataCacheName = 'trubr5'
-const cacheName = 'trubr-5'
+const dataCacheName = 'trubr6'
+const cacheName = 'trubr-6'
 
 const staticAssets = [
   "/",
@@ -24,6 +24,7 @@ const staticAssets = [
 self.addEventListener('install', async () => {
 	const cache = await caches.open(cacheName)
 	cache.addAll(staticAssets)
+	self.skipWaiting()
 })
 
 self.addEventListener('activate', event => {
