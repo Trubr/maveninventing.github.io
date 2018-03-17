@@ -22,7 +22,6 @@ export default () => {
 
 	scrollDown.addEventListener('click', () => {
 		scroll(target, {
-		
 			offset: 0,
 			ease: 'inOutQuint',
 			duration: 720

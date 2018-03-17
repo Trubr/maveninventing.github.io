@@ -45,7 +45,7 @@
 		left: 50%;
 		margin-top: -20px;
 		transform: translateX(-50%);
-		height: 415px;
+		height: 430px;
 		background: #25386D;
 	}
 }
@@ -86,7 +86,7 @@
 	
 	.medium-post{
 		position: relative;
-		max-height: 280px;
+		max-height: 315px;
 		@include p-t-spacer-($spacer-lg);
 		@include p-b-spacer-($spacer-xl);
 		@include p-x-spacer-($spacer-lg);
@@ -135,7 +135,7 @@
 			font-size: 15px;
 			color: #131E3E;
 			letter-spacing: 0;
-			line-height: 1.1em;
+			line-height: 1.5em;
 		}
 
 		span{

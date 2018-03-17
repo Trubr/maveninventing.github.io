@@ -36,6 +36,11 @@
 		@include m-b-spacer-($spacer-2xl);
 		max-width: 1480px;
 		@include p-x-spacer-($spacer-lg);
+
+		.container.bg{
+			height: 365px;
+		}
+
 	}
 
 	@extend %navigation;

@@ -24,11 +24,12 @@
 		}
 
 		p{
-			@include size--base-1;
+			@include rem('font-size', 15px);
 			@include font--secondary-regular;
 			line-height: 1.5em;
 			color: $c4;
 		}
+		
 	}
 
 	@include responsive(769px, 'max') {
@@ -39,13 +40,11 @@
 			font-size: 14vw;
 		}
 
-
 		article > .grid:first-child{
 			margin: 0 auto;
 			display: block;
 			max-width: 600px;
 			@include m-b-spacer-($spacer-lg);
-
 		}
 
 	}

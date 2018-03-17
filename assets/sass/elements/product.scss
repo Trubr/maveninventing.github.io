@@ -14,12 +14,12 @@
 		min-height: 50px;
 	}
 
-	P{
+	p{
 		@include font--secondary-regular;
 		font-size: 15px;
 		color: #131E3E;
 		letter-spacing: 0;
-		line-height: 1.1em;
+		line-height: 1.5em;
 	}
 
 }

@@ -1,3 +1,4 @@
+import fonts from './vendors/fontFace'
 import scrollDown from './scrollDown'
 import menu from './menu'
 import lettering from './lettering'

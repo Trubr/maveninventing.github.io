@@ -25,7 +25,8 @@
 }
 
 @mixin font--secondary-regular {
-  font-family: "Athelas-Regular",sans-serif;
+  // font-family: "Athelas-Regular",sans-serif;
+  font-family: 'Lora', "Athelas-Regular", serif;
   font-style: normal;
   font-weight: 500;
 }

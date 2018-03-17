@@ -35,7 +35,6 @@ self.addEventListener('fetch', event => {
 	if (url.origin === location.origin) {
 		event.respondWith(cacheFirst(request))
 	} else {
-    console.log(request)
 		event.respondWith(networkFirst(request))
 	}
 })
