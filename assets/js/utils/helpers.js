@@ -22,6 +22,9 @@ function forEach(list, callback) {
 }
 
 
+export function svg(width, height) {
+  return `data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 ${width} ${height}'%2F%3E`
+}
 /**
  * Get a random integer between `min` and `max`.
  *

@@ -5,18 +5,17 @@ import lettering from './lettering'
 import lazyLoad from './lazyLoad'
 import loadBlog from './loadBlog'
 
-	// service worker code here
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('../sw.js')
-	}
+// service worker code here
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('../sw.js')
+}
 
-	menu()
-	
-	lettering()
+menu()
 
-	scrollDown()
+lettering()
 
-	lazyLoad()
+scrollDown()
 
-	loadBlog()
-	
+lazyLoad()
+
+loadBlog()

@@ -78,7 +78,7 @@
 /******/ 		// start chunk loading
 /******/ 		var head = document.getElementsByTagName('head')[0];
 /******/ 		var script = document.createElement('script');
-/******/ 		script.type = 'text/javascript';
+/******/ 		script.type = "text/javascript";
 /******/ 		script.charset = 'utf-8';
 /******/ 		script.async = true;
 /******/ 		script.timeout = 120000;
@@ -155,6 +155,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.svg = svg;
 var the = document.querySelector.bind(document);
 var all = document.querySelectorAll.bind(document);
 
@@ -172,6 +173,9 @@ function forEach(list, callback) {
   Array.prototype.forEach.call(list, callback);
 }
 
+function svg(width, height) {
+  return "data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 " + width + " " + height + "'%2F%3E";
+}
 /**
  * Get a random integer between `min` and `max`.
  *
@@ -1499,7 +1503,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = function () {
 
-	var hamburger = (0, _helpers.the)('#hamburger') || false;
+	var hamburger = (0, _helpers.the)('#hamburger');
 
 	if (!hamburger) return;
 
@@ -1531,7 +1535,7 @@ exports.default = function () {
 	var anchors = (0, _helpers.all)('.anchor');
 	var targets = [];
 
-	(0, _helpers.forEach)(anchors, function (anchor) {
+	function startingAnchors(anchor) {
 
 		targets.push({
 			anchor: anchor.getAttribute('href'),
@@ -1548,8 +1552,6 @@ exports.default = function () {
 				return target.anchor == selector;
 			});
 
-			console.log(target);
-
 			(0, _scrollToElement2.default)(target.target, {
 				offset: 0,
 				ease: 'inOutQuint',
@@ -1558,7 +1560,9 @@ exports.default = function () {
 
 			controls.open && toogleMenu();
 		}, true);
-	});
+	}
+
+	(0, _helpers.forEach)(anchors, startingAnchors);
 };
 
 /***/ }),

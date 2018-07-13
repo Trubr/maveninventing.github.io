@@ -3,7 +3,7 @@ import scroll from 'scroll-to-element'
 
 export default () => {
 
-	const hamburger = the('#hamburger') || false
+	const hamburger = the('#hamburger')
 
 	if (!hamburger) return
 
@@ -31,15 +31,13 @@ export default () => {
 
 	}
 
-
 	hamburger.addEventListener('click',toogleMenu, true)
-
 
 	const anchors = all('.anchor')
 	const targets = []
 
-	forEach(anchors, anchor => {
-		
+	function startingAnchors(anchor){
+
 		targets.push({
 			anchor: anchor.getAttribute('href'),
 			target: the(anchor.getAttribute('href'))
@@ -53,9 +51,7 @@ export default () => {
 			const selector = e.target.getAttribute('href')
 			const target = targets.find(target => target.anchor == selector)
 
-			console.log(target)
-
-			scroll(target.target,{
+			scroll(target.target, {
 				offset: 0,
 				ease: 'inOutQuint',
 				duration: 720
@@ -65,9 +61,9 @@ export default () => {
 
 		}, true)
 
+	}
 
-
-	})
+	forEach(anchors, startingAnchors)
 
 }
 
