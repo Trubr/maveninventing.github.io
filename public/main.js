@@ -342,6 +342,8 @@ var _loadBlog2 = _interopRequireDefault(_loadBlog);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+if (location.protocol !== 'https:') location.protocol = 'https:';
+
 // service worker code here
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('../sw.js');
