@@ -14808,12 +14808,16 @@ exports.default = function () {
 		});
 	}
 
+	function svg(width, height) {
+		return 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D\'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\' viewBox%3D\'0 0 ' + width + ' ' + height + '\'%2F%3E';
+	}
+
 	function videoElement(link, image, video) {
 
 		var h = image.high.height;
 		var w = image.high.width;
 
-		return '<div class="video-youtube swiper-slide">\n\t\t\t\t<a href="https://www.youtube.com/watch?v=' + link + '" target="_blank" rel="noopener">\n\t\t\t\t\t<figure>\n\t\t\t\t\t\t<img data-src="' + image.high.url + '" src="' + (0, _helpers.svg)(w, h) + '" alt="' + video.snippet.title + '" height="' + h + '" width="' + w + '" class="swiper-lazy" />\n\t\t\t\t\t</figure>\n\t\t\t\t</a>\n\t\t\t</div>';
+		return '<div class="video-youtube swiper-slide">\n\t\t\t\t<a href="https://www.youtube.com/watch?v=' + link + '" target="_blank" rel="noopener">\n\t\t\t\t\t<figure>\n\t\t\t\t\t\t<img data-src="' + image.high.url + '" src="' + svg(w, h) + '" alt="' + video.snippet.title + '" height="' + h + '" width="' + w + '" class="swiper-lazy" />\n\t\t\t\t\t</figure>\n\t\t\t\t</a>\n\t\t\t</div>';
 	}
 
 	var carrousel = (0, _helpers.the)('#watch-more .swiper-container');

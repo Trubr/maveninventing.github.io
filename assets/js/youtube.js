@@ -1,4 +1,4 @@
-import { the, svg } from './utils/helpers'
+import { the } from './utils/helpers'
 import Swiper from './vendors/swiper.esm'
 
 export default () => {
@@ -34,6 +34,10 @@ export default () => {
 
 		})
 
+	}
+
+	function svg(width, height) {
+		return `data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 ${width} ${height}'%2F%3E`
 	}
 
 	function videoElement(link, image, video) {

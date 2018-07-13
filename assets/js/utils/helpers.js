@@ -13,7 +13,6 @@ const animation = window.requestAnimationFrame ||
   }
 
 
-
 /**
  * ForEach applyed for any type of list
  */
