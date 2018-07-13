@@ -8,6 +8,8 @@ export default () => {
 
 	const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${key}&channelId=${id}&part=snippet,id&order=date&maxResults=5`
 
+	console.log(apiUrl)
+
 	const fetcher = () =>{
 
 		return new Promise((resolve, reject) => {
@@ -36,48 +38,6 @@ export default () => {
 
 	}
 
-
-	const carrousel = the('#watch-more .swiper-container')
-
-	const swiper = new Swiper(carrousel, {
-		init: false,
-		slidesPerView: 5,
-		spaceBetween: 20,
-		slidesPerGroup: 5,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		preloadImages: false,
-		lazy: true,
-		watchSlidesVisibility: true, 
-		breakpoints: {
-			480: {
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 5,
-			},
-			769: {
-				slidesPerView: 2,
-				slidesPerGroup: 2,
-				spaceBetween: 30
-			},
-			1240: {
-				slidesPerView: 3,
-				slidesPerGroup: 3,
-				spaceBetween: 30
-			},
-			1480: {
-				slidesPerView: 4,
-				slidesPerGroup: 4,
-				spaceBetween: 30
-			}
-		}
-	})
-
-	swiper.on('init', () => carrousel.classList.add('active'))
-
-	const svg = (h, w) => `data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox%3D'0 0 ${w} ${h}'%2F%3E`
 
 	const videoElement = (link, image, video) => {
 
